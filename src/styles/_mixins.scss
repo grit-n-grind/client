@@ -4,3 +4,10 @@
   @mixin button-gradient
   {background: linear-gradient(180deg, #F75C03 0%, #FF8000 93.51%);
   }
+
+  @mixin button{
+    @include button-gradient;
+    font-family: $poppins;
+    padding: 1.5rem;
+    font-weight: 400;
+  }

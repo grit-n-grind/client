@@ -7,6 +7,8 @@ import Login from './components/Auth/Login';
 import SignUp from './components/Auth/SignUp';
 import Landing from './views/Landing';
 import UserDashboard from './views/UserDashboard';
+import './styles/index1.scss'
+
 
 function App(props) {
     const state = useAuth( props.history );

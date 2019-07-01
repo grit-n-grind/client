@@ -1,14 +1,18 @@
 import React from "react";
-import Navbar from '../components/layout/Navbar'
+import Navbar from "../components/layout/Navbar";
+import '../styles/index1.scss';
+import Button from '../components/layout/Button'
+
 
 const Landing = () => {
   return (
-    <div>
+    <div className="landing-container">
       <Navbar />
       Landing
       <div>
         <div className="left-landing" />
-        <button>WELCOME</button>
+        <button>Hello Landing</button>
+        <Button />
         <div className="landing-content" />
         <div className="right-landing" />
       </div>

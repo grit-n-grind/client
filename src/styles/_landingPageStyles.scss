@@ -1,6 +1,9 @@
-.left-landing{
-    button{
-        background: linear-gradient(180deg, #F75C03 0%, #FF8000 93.51%);
-        
+.landing-container {
+  .left-landing {
+      background-color: black;
+      height: 200px;
+    button {
+      @include button;
     }
+  }
 }
