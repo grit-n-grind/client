@@ -38,7 +38,6 @@ export default function App() {
         <Route exact path="/" render={props => <Landing {...props} />} />
 
         <Route exact path="/own-dash" component={OwnerDashboard} />
-
       </Switch>
     </userContext.Provider>
   )
