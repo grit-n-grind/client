@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../components/layout/Navbar";
-import '../styles/index1.scss';
-import Button from '../components/layout/Button'
-
+import "../styles/index1.scss";
+import Button from "../components/layout/Button";
+import compHeader from "../assets/images/unsplash-track.jpg";
 
 const Landing = () => {
   return (

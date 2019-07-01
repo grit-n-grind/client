@@ -1,13 +1,28 @@
 @mixin radial-gradient($one, $two, $three, $four, $five) {
-    background: radial-gradient(circle at 50% 48%, $one 0%, $two 21.66%, $three 65%, $four 85.5%, $five 100%);
-  }
-  @mixin button-gradient
-  {background: linear-gradient(180deg, #F75C03 0%, #FF8000 93.51%);
-  }
+  background: radial-gradient(
+    circle at 50% 48%,
+    $one 0%,
+    $two 21.66%,
+    $three 65%,
+    $four 85.5%,
+    $five 100%
+  );
+}
+@mixin button-gradient {
+  background: linear-gradient(180deg, #f75c03 0%, #ff8000 93.51%);
+}
 
-  @mixin button{
-    @include button-gradient;
-    font-family: $poppins;
-    padding: 1.5rem;
-    font-weight: 400;
-  }
+@mixin button {
+  @include button-gradient;
+  font-family: $poppins;
+  padding: 1.5rem;
+  font-weight: 400;
+}
+
+@mixin material-shadow-low {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+@mixin material-shadow-mid {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

@@ -1,0 +1,29 @@
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+
+  // &:active {
+  //   //
+  // }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  &:focus {
+    outline: 1px solid $orange-primary;
+  }
+}
