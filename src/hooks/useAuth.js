@@ -1,7 +1,9 @@
 import { useContext, createContext, useEffect, useReducer } from "react"
 import firebase, { store } from "../config/firebase"
 
-var googleProvider = new firebase.auth.GoogleAuthProvider()
+const googleProvider = new firebase.auth.GoogleAuthProvider()
+
+const facebookProvider = new firebase.auth.FacebookAuthProvider()
 
 export const userContext = createContext({
   user: null,
@@ -80,6 +82,8 @@ export const authHandler = type => {
   switch (type) {
     case GOOGLE_AUTH_PROVIDER:
       return firebase.auth().signInWithPopup(googleProvider)
+    case FACEBOOK_AUTH_PROVIDER:
+      return firebase.auth().signInWithPopup()
     default:
       return firebase.auth().signOut()
   }
