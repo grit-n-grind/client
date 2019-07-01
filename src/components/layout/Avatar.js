@@ -1,9 +1,7 @@
-import React from "react";
+import React from "react"
 
 const Avatar = () => {
-    return ( <div className={ "avatar" }>
-    
-    </div> );
-};
+  return <div className={"avatar"} />
+}
 
-export default Avatar;
+export default Avatar

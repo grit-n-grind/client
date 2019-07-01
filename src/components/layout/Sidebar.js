@@ -1,10 +1,17 @@
-import React from "react";
-import Avatar from "./Avatar";
+import React from "react"
+import Avatar from "./Avatar"
+
+import { useSession } from "../../hooks/useAuth"
 
 const Sidebar = () => {
-    return ( <div className={ "sidebar" }>
-        <Avatar/>
-    </div> );
-};
+  const {
+    auth: { photoURL },
+  } = useSession()
+  return (
+    <div className={"sidebar"}>
+      <Avatar />
+    </div>
+  )
+}
 
-export default Sidebar;
+export default Sidebar
