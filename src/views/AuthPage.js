@@ -1,21 +1,21 @@
 import React from "react"
 
-import { useSession, authHandler, GOOGLE_AUTH_PROVIDER } from "../hooks/useAuth"
+import { useSession } from "../hooks/useAuth"
 
 import { Redirect } from "react-router-dom"
+import Login from "../components/Auth/Login";
+import SignUp from "../components/Auth/SignUp";
 
-export default function AuthPage() {
+export default function AuthPage(props) {
   const { auth } = useSession()
-  console.log(auth)
   if (auth) {
     return <Redirect to="/dashboard" />
   }
+
+  console.log(props)
   return (
     <>
-      <h1>Login</h1>
-      <button onClick={() => authHandler(GOOGLE_AUTH_PROVIDER)}>
-        Google Login
-      </button>
+      {props.location.pathname === "/login" ? <Login /> : <SignUp />}
     </>
   )
 }
