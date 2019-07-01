@@ -7,7 +7,7 @@ import PrivateRoute from "./components/PrivateRoute"
 import AuthPage from "./views/AuthPage"
 import Landing from "./views/Landing"
 import UserDashboard from "./views/UserDashboard"
-import OnBoarding from "./components/OnBoarding"
+import OnBoarding from "./views/OnBoarding"
 
 export default function App() {
   const reducer = useAuth()
@@ -21,9 +21,9 @@ export default function App() {
   }
   if (reducer.state.onBoardUser) {
     return (
-      <div>
+      <userContext.Provider value={reducer}>
         <OnBoarding />
-      </div>
+      </userContext.Provider>
     )
   }
   return (
