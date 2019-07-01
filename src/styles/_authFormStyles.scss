@@ -1,0 +1,22 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 20px;
+
+  button {
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_suggestion {
+    display: flex;
+    justify-content: space-between;
+  }
+}

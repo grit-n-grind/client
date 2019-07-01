@@ -49,3 +49,43 @@ h5{
 button{
     @include button;
 }
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+
+  // &:active {
+  //   //
+  // }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  &:focus {
+    outline: 1px solid $orange-primary;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+span,
+div {
+  font-family: $poppins;
+}
+
+p {
+  font-family: $openSans;
+  font-size: 1.6rem;
+}

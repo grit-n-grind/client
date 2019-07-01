@@ -1,17 +1,8 @@
-import React from "react";
-import Navbar from "../components/layout/Navbar";
-import "../styles/index1.scss";
-import Button from "../components/layout/Button";
-
-const style = {
-  fontFamily: "$poppins",
-  padding: ".7rem",
-  fontWeight: "400",
-  border: "none",
-  borderRadius: "10px",
-  background: "linear-gradient(180deg, #F75C03 0%, #FF8000 93.51%)",
-  color: "white"
-};
+import React from "react"
+import Navbar from "../components/layout/Navbar"
+import "../styles/index1.scss"
+import Button from "../components/layout/Button"
+import compHeader from "../assets/images/unsplash-track.jpg"
 
 const Landing = props => {
   return (
@@ -32,7 +23,7 @@ const Landing = props => {
             </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing
