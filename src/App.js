@@ -18,6 +18,13 @@ export default function App() {
       </div>
     )
   }
+  if (reducer.state.onBoardUser) {
+    return (
+      <div>
+        <h1>Onboard User</h1>
+      </div>
+    )
+  }
   return (
     <userContext.Provider value={reducer}>
       {reducer.state.auth && <button onClick={authHandler}>Logout</button>}
