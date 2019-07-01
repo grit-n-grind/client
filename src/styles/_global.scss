@@ -1,3 +1,4 @@
+
 h1, h2, h3, h4, h5, input, span, div{
     font-family: $poppins;
     line-height: 1.2 rem;
@@ -84,6 +85,32 @@ span,
 div {
   font-family: $poppins;
 }
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+
+  // &:active {
+  //   //
+  // }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  &:focus {
+    outline: 1px solid $orange-primary;
+  }
+}
+
 
 p {
   font-family: $openSans;
