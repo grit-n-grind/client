@@ -4,9 +4,9 @@ const WhiteLogo = props => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="79.83"
-      height="100.771"
-      viewBox="0 0 79.83 100.771"
+      width="40"
+      height="60"
+      viewBox="0 0 80 120.771"
     >
       <g
         id="Path_281"
