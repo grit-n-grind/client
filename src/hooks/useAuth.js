@@ -40,7 +40,7 @@ const reducer = (state, action) => {
         user: action.payload,
       }
     case ONBOARD_USER:
-      return { ...state, onBoardUser: true }
+      return { ...state, initializing: false, onBoardUser: true }
     default:
       return state
   }
