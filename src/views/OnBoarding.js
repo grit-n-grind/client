@@ -7,7 +7,7 @@ import { useSession } from "../hooks/useAuth"
 export default function OnBoarding() {
   const {
     auth: { uid },
-  } = useSession()
+  } = useSession();
 
   const [values, handleChange, handleSubmit] = useForm(
     {
@@ -22,7 +22,7 @@ export default function OnBoarding() {
       gymOwner: false,
     },
     handleOnboard,
-  )
+  );
 
   function handleOnboard() {
     store

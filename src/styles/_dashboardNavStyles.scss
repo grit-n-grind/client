@@ -1,0 +1,35 @@
+.dashboard-nav {
+  width: calc(100vw - 300px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1px solid red;
+  height: 50px;
+  z-index: 15;
+  display: flex;
+
+  & .nav {
+    display: flex;
+    font-size: 16px;
+
+    &-item:not(:first-child) {
+      margin-left: 10px;
+
+    }
+
+    &-item:last-child {
+      display: flex;
+      flex-direction: column;
+      height: 50px;
+      border: 1px solid blue;
+    }
+
+    & span {
+      border: 1px solid green;
+      margin-top: 0px;
+      font-size: 10px;
+      background-color: $orange-primary;
+      height: 12px;
+    }
+  }
+}

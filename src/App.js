@@ -10,7 +10,7 @@ import UserDashboard from "./views/UserDashboard"
 
 import OwnerDashboard from "./views/OwnerDashboard"
 
-import OnBoarding from "./components/OnBoarding"
+import OnBoarding from "./views/OnBoarding"
 
 export default function App() {
   const reducer = useAuth()
@@ -31,7 +31,6 @@ export default function App() {
   }
   return (
     <userContext.Provider value={reducer}>
-      {reducer.state.auth && <button onClick={authHandler}>Logout</button>}
       <Switch>
         <Route exact path="/login" render={props => <AuthPage {...props} />} />
         <Route exact path="/signup" render={props => <AuthPage {...props} />} />
