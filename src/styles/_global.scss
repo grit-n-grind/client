@@ -1,55 +1,57 @@
 
-h1, h2, h3, h4, h5, input, span, div{
-    font-family: $poppins;
-    line-height: 1.2 rem;
-    color: white;
+h1, h2, h3, h4, h5, input, span, div {
+  font-family: $poppins;
+  line-height: 1.2rem;
+  color: white;
 }
 
-p, a{
-    font-family: $openSans;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+p, a {
+  font-family: $openSans;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
-h1, div, span{
-    font-size: 2.6rem;
-    line-height: 3.2rem;
-    font-weight: 700;
-    color: white;
+h1, div, span {
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  font-weight: 700;
+  color: white;
 }
 
-h2{
-    font-size: 2.0rem;
-    line-height: 2.5rem;
-    font-weight: 700;
-    color: $orange-secondary
+h2 {
+  font-size: 2.0rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: $orange-secondary
 }
 
-h3{
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-    font-weight: 700;
-}
-h4{
-    font-size: 1.6rem;
-    line-height: 2.0rem;
-    font-weight: 700;
-}
-h5{
-    font-size: 1.4rem;
-    line-height: 1.9rem;
-    font-weight: 700;
+h3 {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 700;
 }
 
-.center{
-    text-align:center;
-    margin: 0 auto;
-    margin: 20px;
+h4 {
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  font-weight: 700;
 }
 
-button{
-    @include button;
+h5 {
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  font-weight: 700;
 }
+
+.center {
+  text-align: center;
+  margin: 20px auto;
+}
+
+button {
+  @include button;
+}
+
 button {
   cursor: pointer;
   border: none;

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans:300|Poppins:300,400,700&display=swap");
-
 @import "variables";
 @import "mixins";
 @import "reset";
@@ -11,6 +10,8 @@
 @import "dashboardGymCompetitionStyles.scss";
 @import "dashboardGymReportsStyles.scss";
 @import "dashboardGymLeaderboardStyles.scss";
+@import "dashboardHeaderStyles";
 @import "competitionCardStyles.scss";
 @import "authFormStyles";
 @import "formStyles";
+@import "avatarStyles";
