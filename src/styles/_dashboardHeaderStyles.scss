@@ -1,15 +1,17 @@
 .dashboard_header {
-  border: 1px solid red;
-  height: 250px;
+  // border: 1px solid red;
+  height: 300px;
   width: calc(100vw - 300px);
   overflow: hidden;
   position: relative;
+  background-position-y: -50%;
 
   &-img {
-    filter: opacity(.2);
+    filter: opacity(0.2);
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
   }
 
   &-user-name {
