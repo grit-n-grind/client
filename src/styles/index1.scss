@@ -1,7 +1,8 @@
-@import "reset";
+@import "https://fonts.googleapis.com/css?family=Lato|Open+Sans:300|Poppins:300,400,700&display=swap";
 @import "variables";
 @import "mixins";
-@import "global.scss";
+@import "reset";
+@import "global";
 @import "landingPageStyles.scss";
 @import "modalStyles.scss";
 @import "dashboardSideBarStyles";
@@ -9,5 +10,6 @@
 @import "dashboardGymCompetitionStyles.scss";
 @import "dashboardGymReportsStyles.scss";
 @import "dashboardGymLeaderboardStyles.scss";
+@import "competitionCardStyles.scss";
 @import "authFormStyles";
 @import "formStyles";

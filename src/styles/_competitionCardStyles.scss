@@ -1,0 +1,74 @@
+.competition_card {
+  width: 48.5%;
+  background: $black-main;
+  color: white;
+  border-radius: 4px;
+  font-family: $openSans;
+  @include material-shadow-low;
+
+  .competition_card_header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+      url("../assets/images/unsplash-track.jpg"), rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px 4px 0 0;
+    padding: 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .competition_card_title {
+      h2 {
+        font-family: $poppins;
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin: 0;
+        margin-bottom: 15px;
+        line-height: 3rem;
+      }
+
+      p {
+        margin: 0;
+        font-family: $lato;
+        font-size: 3.6rem;
+        color: $orange-primary;
+        font-weight: 300;
+      }
+    }
+
+    .competition_card_title_bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      span {
+        font-size: 1.6rem;
+      }
+
+      button {
+        background: $orange-primary;
+        border: none;
+        border-radius: 50px;
+        padding: 10px 20px;
+        min-width: 90px;
+        color: white;
+        @include material-shadow-mid;
+      }
+    }
+  }
+
+  .competition_card_body {
+    padding: 15px 20px 40px;
+
+    p:first-of-type {
+      opacity: 0.5;
+      margin-bottom: 20px;
+      word-spacing: 0;
+    }
+
+    p:nth-of-type(2) {
+      opacity: 0.9;
+    }
+  }
+}
