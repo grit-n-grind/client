@@ -91,11 +91,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   list-style: none;
-<<<<<<< HEAD
-  word-spacing: 0.1rem;
-=======
   word-spacing: 0.3rem;
->>>>>>> 5c81440567e2d37437a695bec836ee3679764ea7
   letter-spacing: 0.1rem;
 }
 /* HTML5 display-role reset for older browsers */
@@ -114,18 +110,9 @@ section {
 }
 html {
   font-size: 62.5%;
-<<<<<<< HEAD
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-=======
 }
 * {
   box-sizing: border-box;
->>>>>>> 5c81440567e2d37437a695bec836ee3679764ea7
 }
 body {
   line-height: 1;
@@ -143,18 +130,10 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-<<<<<<< HEAD
   content: "";
-=======
-  content: '';
->>>>>>> 5c81440567e2d37437a695bec836ee3679764ea7
   content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5c81440567e2d37437a695bec836ee3679764ea7
