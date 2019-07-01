@@ -11,7 +11,6 @@ import UserDashboard from './views/UserDashboard';
 function App(props) {
     const state = useAuth( props.history );
     return ( <div>
-        <h1>Firebase Template</h1>
         <Route exact path='/' render={ props => <Landing {...props} /> }/>
         <Route path='/login' render={ props => <Login { ...props } /> }/>
         <Route path='/signup' render={ props => <SignUp { ...props } /> }/>
