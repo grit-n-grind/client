@@ -12,7 +12,6 @@ import OwnerDashboard from "./views/OwnerDashboard"
 
 import OnBoarding from "./components/OnBoarding"
 
-
 export default function App() {
   const reducer = useAuth()
   console.log(reducer.state)
@@ -23,15 +22,13 @@ export default function App() {
       </div>
     )
   }
-
   if (reducer.state.onBoardUser) {
     return (
-      <div>
+      <userContext.Provider value={reducer}>
         <OnBoarding />
-      </div>
+      </userContext.Provider>
     )
   }
-
   return (
     <userContext.Provider value={reducer}>
       {reducer.state.auth && <button onClick={authHandler}>Logout</button>}
