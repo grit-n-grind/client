@@ -1,0 +1,26 @@
+.dashboard_header {
+  border: 1px solid red;
+  height: 250px;
+  width: calc(100vw - 300px);
+  overflow: hidden;
+  position: relative;
+
+  &-img {
+    filter: opacity(.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-user-name {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
+  &-city {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+  }
+}
