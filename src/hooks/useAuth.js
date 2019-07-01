@@ -21,8 +21,7 @@ export const useAuth = ( history ) => {
         setState( { initializing: false, user } );
         
         if( !user && history.location.pathname !== "/signup" &&
-            history.location.pathname !== "/login" &&
-            history.location.pathname !== "/root" ){
+            history.location.pathname !== "/" ){
             history.push( "/login" );
         }
     }
