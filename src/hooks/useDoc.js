@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useDoc = (
-  ref,
-): [boolean, any, boolean, (doc: any) => void, () => void] => {
+export const useDoc = (ref) => {
   // create stat hook to store the firebase data
 
   const [docState, setDocState] = useState({
@@ -33,7 +31,7 @@ export const useDoc = (
     }
   }, [ref]);
 
-  function setDoc(doc: any): void {
+  function setDoc(doc) {
     ref.set(doc);
   }
 
