@@ -7,6 +7,7 @@ export const userContext = createContext({
   user: null,
   initializing: true,
   auth: null,
+  onBoardUser: false,
 })
 
 export const useSession = () => {
@@ -18,17 +19,21 @@ const initialState = {
   user: null,
   initializing: true,
   auth: null,
+  onBoardUser: false,
 }
 
 export const AUTH_CHANGE = "AUTH_CHANGE"
 export const SET_DATA = "SET_DATA"
+export const ONBOARD_USER = "ONBOARD_USER"
 
 const reducer = (state, action) => {
   switch (action.type) {
     case AUTH_CHANGE:
       return { ...state, initializing: false, auth: action.payload }
     case SET_DATA:
-      return { ...state, user: action.payload }
+      return { ...state, onBoardUser: false, user: action.payload }
+    case ONBOARD_USER:
+      return { ...state, onBoardUser: true }
     default:
       return state
   }
@@ -55,6 +60,8 @@ export const useAuth = () => {
         .onSnapshot(snapShot => {
           if (snapShot.exists) {
             dispatch({ type: SET_DATA, payload: snapShot.data() })
+          } else {
+            dispatch({ type: ONBOARD_USER })
           }
         })
 
@@ -70,24 +77,9 @@ export const FACEBOOK_AUTH_PROVIDER = "FACEBOOK_AUTH_PROVIDER"
 export const EMAIL_AUTH_PROVIDER = "EMAIL_AUTH_PROVIDER"
 
 export const authHandler = type => {
-  const checkUser = ({ additionalUserInfo, user }) => {
-    console.log(additionalUserInfo, user)
-
-    store
-      .doc(`users/${user.uid}`)
-      .get()
-      .then(res => {
-        if (!res.exists) {
-        }
-      })
-  }
-
   switch (type) {
     case GOOGLE_AUTH_PROVIDER:
-      return firebase
-        .auth()
-        .signInWithPopup(googleProvider)
-        .then(checkUser)
+      return firebase.auth().signInWithPopup(googleProvider)
     default:
       return firebase.auth().signOut()
   }

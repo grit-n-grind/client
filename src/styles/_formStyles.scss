@@ -2,11 +2,14 @@ input {
   width: 100%;
   border: 1px solid $grey;
   background: $black-dark;
-  padding: 12px;
+  height: 50px;
   border-radius: 5px;
 
   &::placeholder {
+    font-family: $poppins;
     font-size: 2rem;
     font-weight: 400;
+    padding: 0 10px;
+    height: 50px;
   }
 }
