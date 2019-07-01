@@ -13,6 +13,15 @@ export const useForm = (initalState, callback) => {
 
   const handleChange = e => {
     e.persist()
+
+    if (e.target.type == "checkbox") {
+      setValue(values => {
+        return { ...values, [e.target.name]: e.target.checked }
+      })
+
+      return
+    }
+
     setValue(values => {
       return { ...values, [e.target.name]: e.target.value }
     })
