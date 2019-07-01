@@ -8,9 +8,11 @@
   @mixin button{
     @include button-gradient;
     font-family: $poppins;
-    padding: .45rem;
+    padding: .55rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-weight: 400;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 15px;
   }
