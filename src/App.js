@@ -10,7 +10,7 @@ import UserDashboard from "./views/UserDashboard"
 
 import OwnerDashboard from "./views/OwnerDashboard"
 
-import OnBoarding from "./components/OnBoarding"
+import OnBoarding from "./views/OnBoarding"
 
 export default function App() {
   const reducer = useAuth()
@@ -39,7 +39,6 @@ export default function App() {
         <Route exact path="/" render={props => <Landing {...props} />} />
 
         <Route exact path="/own-dash" component={OwnerDashboard} />
-
       </Switch>
     </userContext.Provider>
   )
