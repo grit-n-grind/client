@@ -1,5 +1,6 @@
 import React from "react";
 import headerImage from "../../assets/images/user-header-img.png";
+import { FaTrophy } from "react-icons/fa";
 
 const Header = () => {
     return ( <div className={ "dashboard_header" }>
