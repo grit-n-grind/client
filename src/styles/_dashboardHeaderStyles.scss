@@ -1,13 +1,12 @@
 .dashboard_header {
-  border: 1px solid red;
-  height: 250px;
-  width: calc(100vw - 300px);
+  height: 300px;
   overflow: hidden;
   position: relative;
 
   &-img {
-    filter: opacity(.2);
-    position: absolute;
+    filter: opacity(.3);
+    position: relative;
+    width: 100%;
     top: 0;
     left: 0;
   }
