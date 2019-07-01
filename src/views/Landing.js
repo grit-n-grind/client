@@ -8,6 +8,7 @@ const Landing = () => {
       Landing
       <div>
         <div className="left-landing" />
+        <button>WELCOME</button>
         <div className="landing-content" />
         <div className="right-landing" />
       </div>
