@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -88,16 +88,12 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   list-style: none;
-<<<<<<< HEAD
-  word-spacing: 0.1rem;
-=======
   word-spacing: 0.3rem;
->>>>>>> 5c81440567e2d37437a695bec836ee3679764ea7
   letter-spacing: 0.1rem;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -112,49 +108,41 @@ nav,
 section {
   display: block;
 }
+
 html {
   font-size: 62.5%;
-<<<<<<< HEAD
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-=======
 }
-* {
-  box-sizing: border-box;
->>>>>>> 5c81440567e2d37437a695bec836ee3679764ea7
-}
+
 body {
   line-height: 1;
   background: #e5e5e5;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-<<<<<<< HEAD
-  content: "";
-=======
-  content: '';
->>>>>>> 5c81440567e2d37437a695bec836ee3679764ea7
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5c81440567e2d37437a695bec836ee3679764ea7

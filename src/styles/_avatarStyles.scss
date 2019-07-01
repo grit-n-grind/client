@@ -1,0 +1,19 @@
+.avatar {
+  background-color: $grey;
+  width: 70%;
+  height: .7 * 300px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &_image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+.square {
+  // border-radius: 10%;
+  background-color: black;
+}
