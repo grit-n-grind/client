@@ -1,10 +1,13 @@
-import React from "react";
-import Avatar from "./Avatar";
+import React from "react"
 
-const Sidebar = () => {
-    return ( <div className={ "sidebar" }>
-        <Avatar/>
-    </div> );
-};
+import { useSession } from "../../hooks/useAuth"
 
-export default Sidebar;
+const Sidebar = props => {
+  return (
+    <div className={"sidebar"}>
+      {props.children && { ...props.children }}
+    </div>
+  )
+}
+
+export default Sidebar

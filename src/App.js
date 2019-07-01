@@ -7,7 +7,10 @@ import PrivateRoute from "./components/PrivateRoute"
 import AuthPage from "./views/AuthPage"
 import Landing from "./views/Landing"
 import UserDashboard from "./views/UserDashboard"
-import OnBoarding from "./components/OnBoarding"
+
+import OwnerDashboard from "./views/OwnerDashboard"
+
+import OnBoarding from "./views/OnBoarding"
 
 export default function App() {
   const reducer = useAuth()
@@ -21,9 +24,9 @@ export default function App() {
   }
   if (reducer.state.onBoardUser) {
     return (
-      <div>
+      <userContext.Provider value={reducer}>
         <OnBoarding />
-      </div>
+      </userContext.Provider>
     )
   }
   return (
@@ -35,6 +38,8 @@ export default function App() {
         <Route exact path="/login" render={props => <AuthPage {...props} />} />
         <Route exact path="/signup" render={props => <AuthPage {...props} />} />
         <Route exact path="/" render={props => <Landing {...props} />} />
+
+        <Route exact path="/own-dash" component={OwnerDashboard} />
       </Switch>
     </userContext.Provider>
   )

@@ -5,11 +5,11 @@ import WhiteLogo from "../../assets/WhiteLogo";
 import Button from "./Button";
 
 const style = {
-  backgroundColor: "black",
+  backgroundColor: "transparent",
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-end",
-  padding: "20px"
+  padding: "10px"
 };
 
 const marginRight = {
@@ -19,19 +19,24 @@ const marginRight = {
 
 const buttonStyle = {
   fontFamily: "$poppins",
-  padding: ".7rem",
+  padding: ".3rem 3rem",
+  marginBottom: "5px",
   fontWeight: "400",
   border: "none",
-  borderRadius: "10px",
+  fontSize: '1.5rem',
+  borderRadius: "50px",
   background: "linear-gradient(180deg, #F75C03 0%, #FF8000 93.51%)",
   color: "white",
   marginRight: "20px"
 };
 
 const outerContainer = {
+  maxWidth: '1200px',
+  margin: '0 auto',
+  padding: '20px',
   display: "flex",
   justifyContent: "space-between",
-  backgroundColor: "black"
+  backgroundColor: "transparent"
 };
 
 const Navbar = () => {
