@@ -10,10 +10,10 @@ const Landing = () => {
       <Navbar />
       Landing
       <div>
-        <div className="left-landing" />
-        <button>Hello Landing</button>
-        <Button />
+        <div className="left-landing">
+        <button className='landing-button'>Hello Landing</button>
         <div className="landing-content" />
+        </div>
         <div className="right-landing" />
       </div>
     </div>

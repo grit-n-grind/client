@@ -1,6 +1,7 @@
+@import 'reset';
 @import 'variables';
 @import 'mixins';
-@import 'reset';
+@import 'global.scss';
 @import 'landingPageStyles.scss';
 @import 'modalStyles.scss';
 @import 'dashboardSideBarStyles';
@@ -8,4 +9,5 @@
 @import 'dashboardGymCompetitionStyles.scss';
 @import 'dashboardGymReportsStyles.scss';
 @import 'dashboardGymLeaderboardStyles.scss';
+
 

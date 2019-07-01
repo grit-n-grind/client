@@ -1,9 +1,16 @@
 .landing-container {
+    border: 2px solid red;
+    width: 100%;
+    height: 100%;
   .left-landing {
       background-color: black;
       height: 200px;
-    button {
+    .landing-button{
       @include button;
+      &:hover{
+        cursor: pointer;
     }
+    }
+    
   }
 }
