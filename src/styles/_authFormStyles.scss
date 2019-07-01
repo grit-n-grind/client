@@ -1,3 +1,17 @@
+.auth-container {
+  background: $black-light;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+
+  &_wrapper {
+    border-radius: 5px;
+    padding: 20px;
+    background: $black-dark;
+  }
+}
+
 .login-container {
   display: flex;
   flex-direction: column;

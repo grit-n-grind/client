@@ -8,7 +8,10 @@ export default function Login() {
       <button onClick={() => authHandler(GOOGLE_AUTH_PROVIDER)}>
         Login with Facebook
       </button>
-      <button onClick={() => authHandler(GOOGLE_AUTH_PROVIDER)}>
+
+      <button
+        className="button-google"
+        onClick={() => authHandler(GOOGLE_AUTH_PROVIDER)}>
         Login with Google
       </button>
 
