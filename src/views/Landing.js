@@ -1,8 +1,10 @@
 import React from "react"
+
 import Navbar from "../components/layout/Navbar"
 import "../styles/index1.scss"
 import Button from "../components/layout/Button"
 import compHeader from "../assets/images/unsplash-track.jpg"
+import Logo from "../assets/images/logo-text.png"
 
 const Landing = props => {
   return (
@@ -12,7 +14,7 @@ const Landing = props => {
         <div className="left-landing">
         {/* <button className='landing-button'>Hello Landing</button> */}
         <div className="landing-content">
-            <h1>Grit N Grind Logo</h1>
+            <img src={Logo} alt="logo"/>
             <p>The first application of its kind. Get motivated. Get fit. Win big.</p>
             <button>Start Competing</button>
             </div>
