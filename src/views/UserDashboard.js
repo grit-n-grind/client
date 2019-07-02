@@ -6,7 +6,7 @@ import DashboardContent from "../components/User/DashboardContent"
 import { useSession } from "../hooks/useAuth"
 
 const UserDashboard = () => {
-  const [ page, setPage ] = useState( "goals" )
+  const [ page, setPage ] = useState( "Goals" )
   const { user, auth: { photoURL } } = useSession()
   
   return ( <div className={ "user_dashboard" }>
