@@ -1,7 +1,7 @@
 .avatar {
   background-color: $grey;
   width: 70%;
-  height: .7 * 300px;
+  height: .7 * 270px;
   border-radius: 50%;
   margin: 0 auto;
   overflow: hidden;
@@ -14,6 +14,12 @@
 }
 
 .square {
-  // border-radius: 10%;
-  background-color: black;
+  width: 160px;
+  border-radius: 4%;
+  background-color: $black-dark;
+  background-image: url(../assets/images/kisspng-crunch-anderson-crunch-fitness-crunch-carrollw-gym-5ac4a1029034a2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 130px;
+  margin-bottom: 20px;
 }
