@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const CompetitionCard = () => {
   return (
@@ -23,10 +23,11 @@ const CompetitionCard = () => {
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
           rebum. Stet.
+          {/*  */}
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CompetitionCard;
+export default CompetitionCard

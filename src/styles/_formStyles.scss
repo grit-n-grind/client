@@ -3,7 +3,7 @@ input {
   border: 1px solid $grey;
   background: $black-dark;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 4px;
 
   &::placeholder {
     font-family: $poppins;
@@ -11,5 +11,9 @@ input {
     font-weight: 400;
     padding: 0 10px;
     height: 50px;
+  }
+
+  &::focus {
+    padding: 0 10px;
   }
 }

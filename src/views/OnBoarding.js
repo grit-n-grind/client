@@ -1,7 +1,14 @@
 import React from "react"
 import { useForm } from "../hooks/useForm"
+import { store } from "../config/firebase"
+
+import { useSession } from "../hooks/useAuth"
 
 export default function OnBoarding() {
+  const {
+    auth: { uid },
+  } = useSession();
+
   const [values, handleChange, handleSubmit] = useForm(
     {
       firstName: "",
@@ -15,10 +22,13 @@ export default function OnBoarding() {
       gymOwner: false,
     },
     handleOnboard,
-  )
+  );
 
   function handleOnboard() {
-    console.log(values)
+    store
+      .collection("users")
+      .doc(uid)
+      .set(values)
   }
 
   return (

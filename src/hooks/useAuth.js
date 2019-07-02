@@ -8,6 +8,7 @@ const facebookProvider = new firebase.auth.FacebookAuthProvider()
 export const userContext = createContext({
   user: null,
   initializing: true,
+  gettingData: true,
   auth: null,
   onBoardUser: false,
 })
@@ -18,7 +19,7 @@ export const useSession = () => {
 }
 
 const initialState = {
-  user: null,
+  user: {},
   initializing: true,
   auth: null,
   onBoardUser: false,
@@ -33,7 +34,12 @@ const reducer = (state, action) => {
     case AUTH_CHANGE:
       return { ...state, initializing: false, auth: action.payload }
     case SET_DATA:
-      return { ...state, onBoardUser: false, user: action.payload }
+      return {
+        ...state,
+        gettingData: false,
+        onBoardUser: false,
+        user: action.payload,
+      }
     case ONBOARD_USER:
       return { ...state, onBoardUser: true }
     default:
