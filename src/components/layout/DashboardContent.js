@@ -10,14 +10,14 @@ import CurrentCompetitions from "../Gym/CurrentCompetitions"
 
 const DashboardContent = props => {
   return ( <div className={ "dashboard-content" }>
-    { props.page === "Goals" && <UserGoals/> }
-    { props.page === "Stats" && <UserStats/> }
-    { props.page === "graph" && <UserGraph/> }
-    { props.page === "Workout Log" && <WorkoutLog/> }
-    { props.page === "Leader Board" && <LeaderBoard/> }
-    { props.page === "Create Gym" && <CreateGym/> }
-    { props.page === "Create Competition" && <CreateCompetition/> }
-    { props.page === "Competitions" && <CurrentCompetitions/> }
+    { props.page === "Goals" && <UserGoals { ...props }/> }
+    { props.page === "Stats" && <UserStats { ...props }/> }
+    { props.page === "graph" && <UserGraph { ...props }/> }
+    { props.page === "Workout Log" && <WorkoutLog { ...props }/> }
+    { props.page === "Leader Board" && <LeaderBoard { ...props }/> }
+    { props.page === "Create Gym" && <CreateGym { ...props }/> }
+    { props.page === "Create Competition" && <CreateCompetition { ...props }/> }
+    { props.page === "Competitions" && <CurrentCompetitions { ...props }/> }
   </div> )
 }
 

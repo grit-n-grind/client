@@ -1,6 +1,7 @@
 .competition_card {
   width: 48.5%;
   background: $black-main;
+  margin-top: 1rem;
   color: white;
   border-radius: 4px;
   font-family: $openSans;
@@ -8,7 +9,7 @@
 
   .competition_card_header {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-      url("../assets/images/unsplash-track.jpg"), rgba(0, 0, 0, 0.1);
+    url("../assets/images/unsplash-track.jpg"), rgba(0, 0, 0, 0.1);
     background-size: cover;
     background-position: center;
     border-radius: 4px 4px 0 0;

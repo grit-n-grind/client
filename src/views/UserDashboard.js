@@ -15,7 +15,7 @@ const UserDashboard = () => {
     </Sidebar>
     <section className={ "user_dashboard-content" }>
       <Header { ...user } page={ page } setPage={ setPage }/>
-      <DashboardContent page={ page }/>
+      <DashboardContent gym={ user.gym } page={ page }/>
     </section>
   </div> )
 }
