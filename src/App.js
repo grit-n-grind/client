@@ -32,7 +32,6 @@ export default function App() {
   }
   return (
     <userContext.Provider value={reducer}>
-      {reducer.state.auth && <button onClick={authHandler}>Logout</button>}
       <Switch>
         <PrivateRoute exact path="/dashboard" component={UserDashboard} />
         <PrivateRoute exact path="/journals/new" component={AddJournal} />

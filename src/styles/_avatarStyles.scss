@@ -4,7 +4,12 @@
   height: .7 * 300px;
   border-radius: 50%;
   margin: 0 auto;
-  padding-top: 2rem;
+  overflow: hidden;
+
+  &_image {
+    height: 100%;
+    object-fit: cover;
+  }
 
 }
 
