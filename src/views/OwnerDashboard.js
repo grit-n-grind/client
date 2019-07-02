@@ -17,7 +17,7 @@ const OwnerDashboard = () => {
   return ( <div className={ "owner_dashboard" }>
     <Sidebar className='sidebar'>
       <div>
-        <Avatar className={ "avatar square" }/>
+        <Avatar className={ "avatar" }/>
         <p style={ { textAlign: "center", lineHeight: "2.4rem" } }>
           44861 Spruceton Dr
         </p>

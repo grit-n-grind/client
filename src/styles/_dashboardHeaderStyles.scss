@@ -6,6 +6,8 @@
     position: relative;
     padding: 40px 40px 0;
     display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
     
     .block{
       margin-bottom: 104px;
@@ -14,7 +16,6 @@
     &-img {
       width: 100%;
       filter: opacity(0.2);
-      position: absolute;
       top: 0;
       left: 0;
     }
@@ -26,13 +27,14 @@
     }
 
     &-city {
+      text-transform: uppercase;
       color: rgb(182, 182, 182);
       font-weight: 300;
       font-size: 3.6rem;
       margin-bottom: 14px;
     }
     .margin-bottom{
-      margin-bottom: 164px;
+      margin-bottom: 138px;
       }
       .margin-bottom-2{
         margin-bottom: 100px;

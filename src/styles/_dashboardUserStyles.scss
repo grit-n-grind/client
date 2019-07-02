@@ -5,7 +5,12 @@
   background-color: $black-dark;
   display: flex;
 
+  .sidebar{
+    
+  }
+
   &-content {
+    margin-left: 300px;
     width: 100%;
     min-height: 100%;
   }

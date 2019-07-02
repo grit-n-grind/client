@@ -23,7 +23,8 @@ const Header = ({ firstName, lastName, city, state, page, setPage }) => {
       className={"dashboard_header"}
       style={{
         background: `linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(34, 34, 31, 1)), url('${headerImage}')`,
-        backgroundPositionY: "center",
+        bacgkroundPositionY: 'center',
+        backgroundSize: 'cover'
       }}>
       <div>
         <h1
