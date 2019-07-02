@@ -12,5 +12,12 @@ export default function AuthPage(props) {
     return <Redirect to="/dashboard" />
   }
 
-  return <>{props.location.pathname === "/login" ? <Login /> : <SignUp />}</>
+  console.log(props)
+  return (
+    <div className="auth-container">
+      <div className="auth-container_wrapper">
+        {props.location.pathname === "/login" ? <Login /> : <SignUp />}
+      </div>
+    </div>
+  )
 }
