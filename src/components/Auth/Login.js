@@ -1,6 +1,10 @@
 import React from "react"
 import { useForm } from "../../hooks/useForm"
-import { authHandler, GOOGLE_AUTH_PROVIDER } from "../../hooks/useAuth"
+import {
+  authHandler,
+  GOOGLE_AUTH_PROVIDER,
+  EMAIL_AUTH_PROVIDER_LOGIN,
+} from "../../hooks/useAuth"
 
 export default function Login() {
   const [values, handleChange, handleSumit] = useForm(
@@ -13,6 +17,7 @@ export default function Login() {
 
   function handleLogin() {
     console.log(values)
+    authHandler(EMAIL_AUTH_PROVIDER_LOGIN, values)
   }
 
   return (
