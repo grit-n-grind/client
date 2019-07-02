@@ -22,33 +22,106 @@
 
 .dashboard-content {
   min-height: calc(100vh - 250px);
+
+  form {
+    // border: 1px solid red;
+    max-width: 600px;
+    background: $black-main;
+    margin: 0 auto;
+    padding: 20px 40px 40px;
+    margin-bottom: 150px;
+    border-radius: 4px;
+    @include material-shadow-mid;
+
+    label {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $orange-primary;
+
+      input {
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+        border-radius: 2px;
+        border: 1px solid #555;
+
+        &:focus {
+          border: 1px solid #888;
+        }
+
+        &:first-of-type {
+          margin-top: 6px;
+        }
+
+        &::placeholder {
+          font-size: 1.6rem;
+        }
+
+        button {
+          background: transparent;
+          border: 1px solid $orange-primary;
+          color: $orange-primary;
+          font-size: 1.6rem;
+          height: 40px;
+          width: 160px;
+
+          &:hover {
+            color: white;
+            background: $orange-primary;
+          }
+        }
+      }
+
+      input[type="file"] {
+        display: block;
+        background: transparent;
+        border: none;
+        color: $grey;
+        font-size: 1.6rem;
+        height: 40px;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    label[for="Gym Information"]:last-child {
+      margin-bottom: 20px;
+    }
+
+    button {
+      @include button;
+      @include button-gradient;
+      padding: 8px 16px;
+      font-size: 1.6rem;
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
 }
 
-.four-cols{
+.four-cols {
   display: flex;
   justify-content: space-between;
   padding: 5px 15px;
-  .quarter{
-    h1{
+  .quarter {
+    h1 {
       font-weight: 300;
       color: $orange-primary;
       padding-right: 10px;
     }
-    .two-thirds{
+    .two-thirds {
       width: 70%;
-    
-    
-    h4{
-      font-size: 1.1rem;
-      letter-spacing: .1rem;
-     font-weight: 300; 
-     line-height: 1.3rem;
+
+      h4 {
+        font-size: 1.1rem;
+        letter-spacing: 0.1rem;
+        font-weight: 300;
+        line-height: 1.3rem;
+      }
+      p {
+        font-size: 1.1rem;
+        letter-spacing: 0.075rem;
+      }
     }
-    p{
-      font-size:1.1rem;
-      letter-spacing: .075rem;
-    }
-  }
     display: flex;
     justify-content: space-evenly;
     @include material-shadow-mid;
@@ -62,51 +135,51 @@
   }
 }
 
-.two-cols{
+.two-cols {
   display: flex;
   justify-content: space-between;
   padding: 5px 15px;
-  .one-quarter{
+  .one-quarter {
     @include material-shadow-mid;
     width: 24%;
     height: 400px;
     background-color: $black-light;
     border-radius: 5px;
   }
-  .three-quarters{
+  .three-quarters {
     width: 74.5%;
-    .block{
+    .block {
       @include material-shadow-mid;
-    display: block;
-    height: 195px;
-    margin-bottom: 10px;
-    background-color: $black-light;
-    border-radius: 5px;
-    padding: 25px;
-    .progressPics{
-      background-image: url('../assets/images/unsplash-track.jpg');
-      background-size: contain;
+      display: block;
+      height: 195px;
+      margin-bottom: 10px;
+      background-color: $black-light;
       border-radius: 5px;
-      @include material-shadow-mid;
-      width: 23%;
-      margin-top: 15px;
-      height: 100px;
-      background-color: white;
-    }
-    h1{
-      color: $orange-primary;
-      line-height: 3.2rem;
-    }
-    p{
-      opacity: .5;
-    font-size: 1.4rem;
-    word-spacing: .17rem;
-    line-height: 2.4rem;
-    }
+      padding: 25px;
+      .progressPics {
+        background-image: url("../assets/images/unsplash-track.jpg");
+        background-size: contain;
+        border-radius: 5px;
+        @include material-shadow-mid;
+        width: 23%;
+        margin-top: 15px;
+        height: 100px;
+        background-color: white;
+      }
+      h1 {
+        color: $orange-primary;
+        line-height: 3.2rem;
+      }
+      p {
+        opacity: 0.5;
+        font-size: 1.4rem;
+        word-spacing: 0.17rem;
+        line-height: 2.4rem;
+      }
     }
   }
 }
 
-.width{
+.width {
   width: 100%;
 }
