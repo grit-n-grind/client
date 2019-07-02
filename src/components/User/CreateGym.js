@@ -1,14 +1,29 @@
 import React from "react"
 import { useForm } from "../../hooks/useForm"
 
+import FileUploader from "react-firebase-file-uploader"
+
+import firebase, { store } from "../../config/firebase"
+
 const CreateGym = () => {
-  const [gym, handleChanges, handleSubmit] = useForm(
+  const [gym, handleChanges, handleSubmit, setValues] = useForm(
     { name: "", address: "", logo: "" },
     addGym,
   )
 
   function addGym() {
     console.log(gym)
+  }
+
+  function handleUpload(fileName) {
+    firebase
+      .storage()
+      .ref(`gymLogo/`)
+      .child(fileName)
+      .getDownloadURL()
+      .then(url => {
+        setValues({ ...gym, logo: url })
+      })
   }
 
   return (
@@ -29,7 +44,16 @@ const CreateGym = () => {
         value={gym.address}
       />
 
-      {/* Image uploading here */}
+      <FileUploader
+        accept="image/*"
+        name="gymLogo"
+        randomizeFilename
+        storageRef={firebase.storage().ref(`gymLogo/`)}
+        // onUploadStart={this.handleUploadStart}
+        // onUploadError={this.handleUploadError}
+        onUploadSuccess={handleUpload}
+        // onProgress={this.handleProgress}
+      />
 
       <button>Create Gym</button>
     </form>
