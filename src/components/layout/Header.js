@@ -5,16 +5,16 @@ import { authHandler, useSession } from "../../hooks/useAuth"
 import { FaTrophy } from "react-icons/fa"
 import ProfileNav from "../layout/ProfileNav"
 
-const Header = ({ firstName, lastName, city, state, page, setPage }) => {
-  const {
-    user: { gymOwner },
-  } = useSession()
+const Header = ( { firstName, lastName, city, state, page, setPage } ) => {
+  
+  const { user } = useSession()
   const navItems = [
     { name: "Goals", enabled: true },
     { name: "Stats", enabled: true },
     { name: "Leader Board", enabled: true },
     { name: "Workout Log", enabled: true },
     { name: "Create Gym", enabled: true },
+    { name: "Competitions", enabled: true },
     { name: "Playlist", enabled: false },
   ]
 

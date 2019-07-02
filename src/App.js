@@ -1,6 +1,6 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
-import { userContext, useAuth, authHandler } from "./hooks/useAuth"
+import { userContext, useAuth } from "./hooks/useAuth"
 
 // Componentss
 import PrivateRoute from "./components/PrivateRoute"
@@ -11,6 +11,7 @@ import AuthPage from "./views/AuthPage"
 import OnBoarding from "./views/OnBoarding"
 import AddJournal from "./views/AddJournal"
 import UserDashboard from "./views/UserDashboard"
+import SingleGym from "./views/SingleGym"
 
 import OwnerDashboard from "./views/OwnerDashboard"
 
@@ -44,6 +45,11 @@ export default function App() {
           render={props => <AuthPage {...props} />}
         />
         <Route exact path="/" render={props => <Landing {...props} />} />
+        <Route
+          exact
+          path="/gym/:slug"
+          render={props => <SingleGym {...props} />}
+        />
       </Switch>
     </userContext.Provider>
   )
