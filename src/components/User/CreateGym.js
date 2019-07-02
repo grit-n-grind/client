@@ -13,6 +13,12 @@ const CreateGym = () => {
 
   function addGym() {
     console.log(gym)
+    store
+      .collection("gyms")
+      .add(gym)
+      .then(res => {
+        console.log(res)
+      })
   }
 
   function handleUpload(fileName) {
