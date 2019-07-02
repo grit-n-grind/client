@@ -7,7 +7,7 @@ import firebase, { store } from "../../config/firebase"
 
 const CreateGym = () => {
   const [gym, handleChanges, handleSubmit, setValues] = useForm(
-    { name: "", address: "", logo: "" },
+    { name: "", state: "", city: "", zip: "", address: "", logo: "" },
     addGym,
   )
 
@@ -34,6 +34,30 @@ const CreateGym = () => {
         placeholder="Name"
         onChange={handleChanges}
         value={gym.name}
+      />
+
+      <input
+        type="name"
+        name="state"
+        placeholder="State"
+        onChange={handleChanges}
+        value={gym.state}
+      />
+
+      <input
+        type="name"
+        name="city"
+        placeholder="City"
+        onChange={handleChanges}
+        value={gym.city}
+      />
+
+      <input
+        type="number"
+        name="zip"
+        placeholder="Zip"
+        onChange={handleChanges}
+        value={gym.zip}
       />
 
       <input
