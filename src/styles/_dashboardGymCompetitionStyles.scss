@@ -1,0 +1,25 @@
+.owner_dashboard {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: $black-dark;
+    display: flex;
+  
+    &-content {
+      width: 100vh -300px;
+      min-height: 100%;
+    }
+    .sidebar{
+        img{
+            text-align:center;
+        }
+        .gym-content{
+            padding: 5rem;
+            p{
+                line-height: 2.9rem
+            }
+            color{
+
+            }
+        }
+    }
+  }

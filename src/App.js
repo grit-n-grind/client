@@ -11,27 +11,23 @@ import AuthPage from "./views/AuthPage"
 import OnBoarding from "./views/OnBoarding"
 import AddJournal from "./views/AddJournal"
 import UserDashboard from "./views/UserDashboard"
+
 import OwnerDashboard from "./views/OwnerDashboard"
 
-export default function App() {
+export default function App(){
   const reducer = useAuth()
-  console.log(reducer.state)
-  if (reducer.state.initializing) {
-    return (
-      <div>
+  console.log( reducer.state )
+  if( reducer.state.initializing ){
+    return ( <div>
         <h3>Loading...</h3>
-      </div>
-    )
+      </div> )
   }
-  if (reducer.state.onBoardUser) {
-    return (
-      <userContext.Provider value={reducer}>
-        <OnBoarding />
-      </userContext.Provider>
-    )
+  if( reducer.state.onBoardUser ){
+    return ( <userContext.Provider value={ reducer }>
+        <OnBoarding/>
+      </userContext.Provider> )
   }
-  return (
-    <userContext.Provider value={reducer}>
+  return ( <userContext.Provider value={ reducer }>
       <Switch>
         <PrivateRoute exact path="/dashboard" component={UserDashboard} />
         <PrivateRoute exact path="/journals/new" component={AddJournal} />
@@ -41,6 +37,5 @@ export default function App() {
 
         <Route exact path="/own-dash" component={OwnerDashboard} />
       </Switch>
-    </userContext.Provider>
-  )
+    </userContext.Provider> )
 }

@@ -5,10 +5,7 @@ import { authHandler, useSession } from "../../hooks/useAuth"
 import { FaTrophy } from "react-icons/fa"
 import DashboardNav from "../User/DashboardNav"
 
-const Header = () => {
-  const {
-    user: { firstName, lastName, city, state },
-  } = useSession()
+const Header = ({ firstName, lastName, city, state, page, setPage }) => {
   return (
     <div
       className={"dashboard_header"}
@@ -17,17 +14,18 @@ const Header = () => {
         backgroundPositionY: "center",
       }}>
       <div>
-        <h1
-          className={
-            "dashboard_header-user-name"
-          }>{`${firstName} ${lastName}`}</h1>
-        <button onClick={authHandler} className={"dashboard_logout-btn"}>
-          Logout
-        </button>
-        <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
-        <FaTrophy />
+      <h1
+        className={
+          "dashboard_header-user-name"
+        }>{`${firstName} ${lastName}`}</h1>
+      <button onClick={authHandler} className={"dashboard_logout-btn"}>
+        Logout
+      </button>
+      <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
+      <FaTrophy />
       </div>
-      <DashboardNav />
+      { page &&
+      <DashboardNav page={ page } setPage={ setPage }/> }
     </div>
   )
 }

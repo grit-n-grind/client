@@ -91,3 +91,25 @@ p {
   font-family: $openSans;
   font-size: 1.6rem;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  position: absolute;
+  margin-top: 3px;
+
+  &.facebook {
+    margin-left: -97px;
+  }
+
+  &.google {
+    margin-left: -109px;
+  }
+
+  &.email {
+    margin-left: -120px;
+  }
+}
