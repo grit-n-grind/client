@@ -1,0 +1,41 @@
+.dashboard-nav {
+  width: 100%;
+  padding-bottom: 50px;
+  z-index: 15;
+  display: flex;
+
+  & .nav {
+    width: 60%;
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-item {
+      span {
+        font-size: 2rem;
+      }
+
+      &-text {
+        opacity: 1;
+      }
+      &:last-child {
+        .nav-item-text {
+          opacity: 0.3;
+        }
+
+        .coming_soon {
+          position: absolute;
+          font-size: 1.1rem;
+          height: 15px;
+          opacity: 1;
+          line-height: 1rem;
+          padding: 4px;
+          font-weight: 300;
+          background-color: #c54800;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

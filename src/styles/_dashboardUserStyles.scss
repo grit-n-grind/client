@@ -9,3 +9,8 @@
     min-height: 100%;
   }
 }
+
+.dashboard-content {
+  min-height: calc(100vh - 250px);
+}
+

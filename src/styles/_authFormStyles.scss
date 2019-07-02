@@ -1,18 +1,50 @@
+.button-google {
+  background: $white;
+  color: $black-dark;
+}
+
+.button-facebook {
+  background: $facebook-blue;
+}
+
+.auth-container {
+  background: $black-light;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+
+  &_wrapper {
+    border-radius: 4px;
+    padding: 20px;
+    background: $black-dark;
+  }
+}
+
 .login-container {
   display: flex;
   flex-direction: column;
   width: 500px;
   padding: 20px;
 
+  input {
+    margin: 5px 0;
+  }
+
   button {
     height: 60px;
-    border-radius: 5px;
+    border-radius: 4px;
     margin: 5px 0;
+    font-size: 2rem;
   }
 
   &_form {
     display: flex;
     flex-direction: column;
+
+    button {
+      @include button-gradient;
+    }
   }
 
   &_suggestion {
