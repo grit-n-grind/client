@@ -1,0 +1,75 @@
+.onboarding {
+  background: $black-light;
+  min-height: 900px;
+
+  p {
+    width: 500px;
+    margin: 0 auto;
+    padding: 40px 0 20px;
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  label {
+    color: $orange-primary;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    .sublabel {
+      color: #fff;
+      opacity: 0.5;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+
+  label[for="Body Fat"],
+  label[for="Weight"] {
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 48.5%;
+      }
+    }
+  }
+
+  label[for="Gym Owner"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+
+    input[type="checkbox"] {
+      width: 20px;
+      margin-bottom: 0;
+      margin-right: 10px;
+      border: none;
+    }
+  }
+
+  form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px 30px 30px;
+    background: $black-main;
+    border-radius: 4px;
+    @include material-shadow-mid;
+
+    input {
+      margin-bottom: 10px;
+
+      &::placeholder {
+        font-size: 1.8rem;
+      }
+    }
+
+    button {
+      @include button;
+      @include button-gradient;
+      width: 100%;
+      font-size: 2rem;
+      padding: 8px 0;
+    }
+  }
+}
