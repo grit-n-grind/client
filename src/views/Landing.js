@@ -2,13 +2,11 @@ import React from "react"
 
 import Navbar from "../components/layout/Navbar"
 import "../styles/index1.scss"
-import Button from "../components/layout/Button"
-import compHeader from "../assets/images/unsplash-track.jpg"
 import Logo from "../assets/images/logo-text.png"
 
 import { Link } from "react-router-dom"
 
-const Landing = props => {
+const Landing = () => {
   return (
     <>
       <Navbar />
