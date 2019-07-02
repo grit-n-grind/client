@@ -20,7 +20,7 @@ const Header = ( { firstName, lastName, city, state, page, setPage } ) => {
       background: `linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(34, 34, 31, 1)), url('${ headerImage }')`,
       backgroundPositionY: "center",
     } }>
-    <div>
+    <div className="block">
       <h1
         className={ "dashboard_header-user-name" }>{ `${ firstName } ${ lastName }` }</h1>
       <button onClick={ authHandler } className={ "dashboard_logout-btn" }>

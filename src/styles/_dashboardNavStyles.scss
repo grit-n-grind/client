@@ -3,21 +3,28 @@
   padding-bottom: 50px;
   z-index: 15;
   display: flex;
+  
 
   & .nav {
-    width: 60%;
+    width: 100%;
     display: flex;
     font-size: 16px;
     justify-content: space-between;
     flex-wrap: wrap;
-
+   
     & .active > span {
       color: $orange-primary;
     }
 
     &-item {
       span {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding: 7px;
+        letter-spacing: .05rem;
+        &:hover{
+          cursor:pointer;
+        }
       }
 
       &-text {
@@ -27,19 +34,25 @@
       &:last-child {
         .nav-item-text {
           opacity: 0.3;
+          &:hover{
+            cursor:pointer;
+          }
         }
+       
 
         .coming_soon {
           position: absolute;
-          font-size: .8rem;
-          height: 15px;
+          letter-spacing: .05rem;
+          font-size: .72rem;
           opacity: 1;
           line-height: 1rem;
-          padding: 5px;
-          font-weight: 300;
-          background-color: $orange-secondary;
-          border-radius: 30px;
-          align-content: center;
+          margin-left:2px;
+          padding: 4px;
+          font-weight: 400;
+          color: $orange-primary;
+          border: $orange-primary 1px solid;
+          border-radius: 8px;
+          opacity:.7;
         }
       }
     }
