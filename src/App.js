@@ -2,15 +2,16 @@ import React from "react"
 import { Route, Switch } from "react-router-dom"
 import { userContext, useAuth, authHandler } from "./hooks/useAuth"
 
+// Componentss
 import PrivateRoute from "./components/PrivateRoute"
 
-import AuthPage from "./views/AuthPage"
+// Views
 import Landing from "./views/Landing"
-import UserDashboard from "./views/UserDashboard"
-
-import OwnerDashboard from "./views/OwnerDashboard"
-
+import AuthPage from "./views/AuthPage"
 import OnBoarding from "./views/OnBoarding"
+import AddJournal from "./views/AddJournal"
+import UserDashboard from "./views/UserDashboard"
+import OwnerDashboard from "./views/OwnerDashboard"
 
 export default function App() {
   const reducer = useAuth()
@@ -34,7 +35,7 @@ export default function App() {
       {reducer.state.auth && <button onClick={authHandler}>Logout</button>}
       <Switch>
         <PrivateRoute exact path="/dashboard" component={UserDashboard} />
-        <PrivateRoute exact path="/journals/new" component={UserDashboard} />
+        <PrivateRoute exact path="/journals/new" component={AddJournal} />
         <Route exact path="/login" render={props => <AuthPage {...props} />} />
         <Route exact path="/signup" render={props => <AuthPage {...props} />} />
         <Route exact path="/" render={props => <Landing {...props} />} />

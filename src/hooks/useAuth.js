@@ -19,7 +19,7 @@ export const useSession = () => {
 
 const initialState = {
   user: null,
-  initializing: true,
+  initializing: false,
   auth: null,
   onBoardUser: false,
 }

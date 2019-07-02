@@ -1,17 +1,26 @@
-
-h1, h2, h3, h4, h5, input, span, div {
+h1,
+h2,
+h3,
+h4,
+h5,
+input,
+span,
+div {
   font-family: $poppins;
   line-height: 1.2rem;
   color: white;
 }
 
-p, a {
+p,
+a {
   font-family: $openSans;
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
 
-h1, div, span {
+h1,
+div,
+span {
   font-size: 2.6rem;
   line-height: 3.2rem;
   font-weight: 700;
@@ -19,10 +28,10 @@ h1, div, span {
 }
 
 h2 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 700;
-  color: $orange-secondary
+  color: $orange-secondary;
 }
 
 h3 {
@@ -33,7 +42,7 @@ h3 {
 
 h4 {
   font-size: 1.6rem;
-  line-height: 2.0rem;
+  line-height: 2rem;
   font-weight: 700;
 }
 
@@ -73,46 +82,10 @@ button {
 
 input {
   &:focus {
-    outline: 1px solid $orange-primary;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-input,
-span,
-div {
-  font-family: $poppins;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  transition: 0.3s;
-
-  &:hover {
-    transform: translateY(-1px);
-    opacity: 0.9;
-  }
-
-  // &:active {
-  //   //
-  // }
-
-  &:focus {
+    border: 1px solid $orange-primary;
     outline: none;
   }
 }
-
-input {
-  &:focus {
-    outline: 1px solid $orange-primary;
-  }
-}
-
 
 p {
   font-family: $openSans;

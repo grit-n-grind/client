@@ -32,12 +32,12 @@ export default function AddJournal() {
         onChange={handleChange}
         value={values.duration}
       />
-      <input
+      {/* <input
         type="file"
         name="progressPic"
         onChange={handleChange}
         value={values.progressPic}
-      />
+      /> */}
     </form>
   )
 }
