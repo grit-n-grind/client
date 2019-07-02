@@ -11,6 +11,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    & .active > span {
+      color: $orange-primary;
+    }
+
     &-item {
       span {
         font-size: 2rem;
@@ -19,6 +23,7 @@
       &-text {
         opacity: 1;
       }
+
       &:last-child {
         .nav-item-text {
           opacity: 0.3;
