@@ -1,20 +1,49 @@
 import React from "react"
-
+import { useForm } from "../../hooks/useForm"
 import { authHandler, GOOGLE_AUTH_PROVIDER } from "../../hooks/useAuth"
 
 export default function Login() {
+  const [values, handleChange, handleSumit] = useForm(
+    {
+      email: "",
+      password: "",
+    },
+    handleLogin,
+  )
+
+  function handleLogin() {
+    console.log(values)
+  }
+
   return (
     <div className="login-container">
-      <button onClick={() => authHandler(GOOGLE_AUTH_PROVIDER)}>
+      <button
+        className="button-facebook"
+        onClick={() => authHandler(GOOGLE_AUTH_PROVIDER)}>
         Login with Facebook
       </button>
-      <button onClick={() => authHandler(GOOGLE_AUTH_PROVIDER)}>
+
+      <button
+        className="button-google"
+        onClick={() => authHandler(GOOGLE_AUTH_PROVIDER)}>
         Login with Google
       </button>
 
-      <form className="login-container_form">
-        <input type="email" name="email" placeholder="Email" />
-        <input type="password" name="password" placeholder="Password" />
+      <form className="login-container_form" onSubmit={handleSumit}>
+        <input
+          type="email"
+          name="email"
+          onChange={handleChange}
+          value={values.email}
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          name="password"
+          onChange={handleChange}
+          value={values.password}
+          placeholder="Password"
+        />
         <button>Login with Email</button>
       </form>
 

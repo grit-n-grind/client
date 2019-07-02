@@ -7,28 +7,28 @@ const DashboardNav = props => {
       <li
         className={ props.page === "goals" ? "nav-item active" : "nav-item" }
         onClick={ () => props.setPage( "goals" ) }
-      >Goals
+      ><span className="nav-item-text">Goals</span>
       </li>
       <li
         className={ props.page === "stats" ? "nav-item active" : "nav-item" }
         onClick={ () => props.setPage( "stats" ) }
-      >Stats
+      ><span className="nav-item-text">Stats</span>
       </li>
       <li
         className={ props.page === "leaderboard" ? "nav-item active" :
           "nav-item" }
         onClick={ () => props.setPage( "leaderboard" ) }
-      >LeaderBoard
+      ><span className="nav-item-text">LeaderBoard</span>
       </li>
       <li className={ props.page === "workoutLog" ? "nav-item active" :
         "nav-item" }
           onClick={ () => props.setPage( "workoutLog" ) }
-      >Workout Log
+      ><span className="nav-item-text">Workout Log</span>
       </li>
       <li className={ props.page === "playlist" ? "nav-item active" :
-        "nav-item" }>Playlist<span>Comming Soon</span></li>
+        "nav-item" }><span className="nav-item-text">Playlist</span>{ " " }
+        <span className="coming_soon">COMING SOON</span></li>
     </ul>
   </div> )
 }
-
 export default DashboardNav

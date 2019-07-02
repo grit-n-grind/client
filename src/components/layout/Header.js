@@ -5,22 +5,29 @@ import { authHandler, useSession } from "../../hooks/useAuth"
 import { FaTrophy } from "react-icons/fa"
 import DashboardNav from "../User/DashboardNav"
 
-const Header = props => {
-  const {
-    user: { firstName, lastName, city, state },
-  } = useSession()
-  return ( <div className={ "dashboard_header" }>
-    <img className={ "dashboard_header-img" } src={ headerImage }/>
-    <h1
-      className={ "dashboard_header-user-name" }>{ `${ firstName } ${ lastName }` }</h1>
-    <button onClick={ authHandler }
-            className={ "dashboard_logout-btn" }>Logout
-    </button>
-    <h3 className={ "dashboard_header-city" }>{ `${ city }, ${ state }` }</h3>
-    <FaTrophy/>
-    { props.page &&
-    <DashboardNav page={ props.page } setPage={ props.setPage }/> }
-  </div> )
+const Header = ({ firstName, lastName, city, state, page, setPage }) => {
+  return (
+    <div
+      className={"dashboard_header"}
+      style={{
+        background: `linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(34, 34, 31, 1)), url('${headerImage}')`,
+        backgroundPositionY: "center",
+      }}>
+      <div>
+      <h1
+        className={
+          "dashboard_header-user-name"
+        }>{`${firstName} ${lastName}`}</h1>
+      <button onClick={authHandler} className={"dashboard_logout-btn"}>
+        Logout
+      </button>
+      <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
+      <FaTrophy />
+      </div>
+      { page &&
+      <DashboardNav page={ page } setPage={ setPage }/> }
+    </div>
+  )
 }
 
 export default Header
