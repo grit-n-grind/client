@@ -108,3 +108,175 @@
     margin: 0 0 0 20px;
   }
 }
+
+.add_journal {
+  margin: 0 auto;
+  background: $black-dark;
+  min-height: 100vh;
+  // padding: 0 60px;
+  display: flex;
+
+  p {
+    color: $orange-primary;
+    font-family: $poppins;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  &_form_group {
+    background: $black-main;
+    position: fixed;
+    min-height: 100vh;
+    @include material-shadow-mid;
+    padding: 30px 60px;
+
+    h2 {
+      color: $white;
+      font-size: 2.4rem;
+      font-weight: 300;
+    }
+
+    form {
+      min-width: 375px;
+      max-width: 400px;
+      background: $black-main;
+      // padding: 20px 30px;
+      border-radius: 4px;
+
+      input {
+        margin-bottom: 10px;
+        height: 40px;
+        font-size: 1.6rem;
+        border-radius: 2px;
+        border: 1px solid #555;
+
+        &:focus {
+          border: 1px solid #888;
+        }
+
+        &:first-of-type {
+          margin-top: 6px;
+        }
+
+        &::placeholder {
+          font-size: 1.6rem;
+        }
+      }
+
+      input[type="file"] {
+        display: block;
+        background: transparent;
+        border: none;
+        color: $grey;
+        font-size: 1.6rem;
+        height: 40px;
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  button {
+    @include button;
+    @include button-inverted;
+    padding: 8px 16px;
+    font-size: 1.6rem;
+    width: 100%;
+    font-weight: 300;
+    margin-top: 15px;
+  }
+
+  .exercises_to_submit {
+    display: flex;
+    flex-direction: column;
+    margin-left: 540px;
+    min-height: 500px;
+    width: 100%;
+    padding-top: 60px;
+
+    h2,
+    h3 {
+      color: $white;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      opacity: 0.5;
+      font-size: 2rem;
+    }
+
+    .exercise_card {
+      max-width: 1000px;
+      border-radius: 4px;
+      justify-content: space-between;
+      display: flex;
+      padding: 10px;
+      margin: 0 auto 15px;
+      width: 90%;
+      background: $black-main;
+      @include material-shadow-low;
+      // filter: contrast(140%);
+
+      svg {
+        margin-top: 14px;
+        margin-right: 10px;
+        color: $orange-primary;
+      }
+
+      p {
+        color: $white;
+      }
+
+      .exercise_title {
+        & > p {
+          font-size: 3rem;
+          font-family: $poppins;
+          font-weight: 700;
+        }
+
+        & > p:last-of-type {
+          font-size: 2rem;
+          font-weight: 400;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .exercise_details {
+      display: flex;
+      min-width: 50%;
+      justify-content: space-evenly;
+
+      p {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+
+      span {
+        display: block;
+        padding-top: 6px;
+        color: $orange-primary;
+        font-weight: 300;
+        font-family: $openSans;
+      }
+    }
+
+    button {
+      @include button;
+      @include button-gradient;
+      height: 50px;
+      align-self: flex-end;
+      max-width: 300px;
+      font-size: 2rem;
+      margin: 0 auto;
+    }
+  }
+}
