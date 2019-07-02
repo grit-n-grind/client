@@ -1,7 +1,35 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Line } from "react-chartjs-2"
 
+import { useSession } from "../../hooks/useAuth"
+
+import { store } from "../../config/firebase"
+
 const UserGoals = () => {
+  const {
+    auth: { uid },
+  } = useSession()
+  const [state, setstate] = useState({ isLoading: true, data: [] })
+
+  useEffect(() => {
+    const unsubscribe = store
+      .collection("users")
+      .doc(uid)
+      .collection("journals")
+      .onSnapshot(snapShot => {
+        let items = []
+        snapShot.forEach(doc => {
+          const data = doc.data()
+          items.push({ id: doc.id, ...data })
+        })
+        setstate({ ...state, isLoading: false, data: items })
+      })
+
+    return () => unsubscribe()
+  }, [])
+
+  console.log(state)
+
   const data = {
     labels: [
       "JUN 1st",
