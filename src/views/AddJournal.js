@@ -1,8 +1,15 @@
 import React, { useState } from "react"
 import { useForm } from "../hooks/useForm"
 
+import FileUploader from "react-firebase-file-uploader"
+
+import firebase, { store } from "../config/firebase"
+
+import { useSession } from "../hooks/useAuth"
+
 export default function AddJournal() {
-  const [values, handleChange, handleSubmit] = useForm(
+  const { auth } = useSession()
+  const [values, handleChange, handleSubmit, setValues] = useForm(
     { weight: "", bodyFat: "", duration: "", progressPic: "" },
     handleAddJournal,
   )
@@ -26,11 +33,30 @@ export default function AddJournal() {
   function handleAddJournal() {
     const journal = { ...values, exercises }
     console.log(journal)
+    store
+      .collection("users")
+      .doc(auth.uid)
+      .collection("journals")
+      .add(journal)
+      .then(res => {
+        console.log(res)
+      })
   }
 
   function handleExercises(e) {
     e.preventDefault()
     addExercise([...exercises, exercise])
+  }
+
+  function handleUpload(fileName) {
+    firebase
+      .storage()
+      .ref(`progressImages/${auth.uid}`)
+      .child(fileName)
+      .getDownloadURL()
+      .then(url => {
+        setValues({ ...values, progressPic: url })
+      })
   }
 
   return (
@@ -59,6 +85,16 @@ export default function AddJournal() {
           value={values.duration}
         />
         {/* IMAGE UPLOADING FOR PROGRESS PICS GOES HERE */}
+        <FileUploader
+          accept="image/*"
+          name="avatar"
+          randomizeFilename
+          storageRef={firebase.storage().ref(`progressImages/${auth.uid}`)}
+          // onUploadStart={this.handleUploadStart}
+          // onUploadError={this.handleUploadError}
+          onUploadSuccess={handleUpload}
+          // onProgress={this.handleProgress}
+        />
       </form>
 
       {exercises.map(exercise => (
@@ -129,8 +165,6 @@ export default function AddJournal() {
           <button onClick={e => handleExercises(e)}>Add exercise</button>
         </form>
       </div>
-
-      {/*  */}
       <button onClick={handleAddJournal}>Add Journal</button>
     </>
   )

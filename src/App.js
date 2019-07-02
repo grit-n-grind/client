@@ -38,7 +38,11 @@ export default function App() {
         <Route exact path="/dashboard/gym" component={OwnerDashboard} />
         <PrivateRoute exact path="/journals/new" component={AddJournal} />
         <Route exact path="/login" render={props => <AuthPage {...props} />} />
-        <Route exact path="/signup" render={props => <AuthPage {...props} />} />
+        <Route
+          exact
+          path="/register"
+          render={props => <AuthPage {...props} />}
+        />
         <Route exact path="/" render={props => <Landing {...props} />} />
       </Switch>
     </userContext.Provider>
