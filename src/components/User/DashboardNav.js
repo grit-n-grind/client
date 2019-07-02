@@ -1,7 +1,7 @@
 import React from "react"
 
 const DashboardNav = props => {
-  debugger
+  
   return ( <div className={ "dashboard-nav" }>
     <ul className={ "nav" }>
       <li
