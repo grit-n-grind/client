@@ -82,12 +82,27 @@ export const useAuth = () => {
 
 export const GOOGLE_AUTH_PROVIDER = "GOOGLE_AUTH_PROVIDER"
 export const FACEBOOK_AUTH_PROVIDER = "FACEBOOK_AUTH_PROVIDER"
-export const EMAIL_AUTH_PROVIDER = "EMAIL_AUTH_PROVIDER"
+export const EMAIL_AUTH_PROVIDER_SIGNUP = "EMAIL_AUTH_PROVIDER_SIGNUP"
+export const EMAIL_AUTH_PROVIDER_LOGIN = "EMAIL_AUTH_PROVIDER_LOGIN"
 
-export const authHandler = type => {
+export const authHandler = (type, values) => {
   switch (type) {
     case GOOGLE_AUTH_PROVIDER:
       return firebase.auth().signInWithPopup(googleProvider)
+    case EMAIL_AUTH_PROVIDER_LOGIN:
+      return firebase
+        .auth()
+        .signInWithEmailAndPassword(values.email, values.password)
+        .then(res => {
+          console.log(res)
+        })
+    case EMAIL_AUTH_PROVIDER_SIGNUP:
+      return firebase
+        .auth()
+        .createUserWithEmailAndPassword(values.email, values.password)
+        .then(res => {
+          console.log(res)
+        })
     case FACEBOOK_AUTH_PROVIDER:
       return firebase.auth().signInWithPopup()
     default:
