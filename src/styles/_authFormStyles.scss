@@ -15,6 +15,7 @@
   align-items: center;
 
   &_wrapper {
+    @include material-shadow-low;
     border-radius: 4px;
     padding: 20px;
     background: $black-dark;
@@ -50,5 +51,49 @@
   &_suggestion {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    margin-top: 50px;
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 700;
+      word-spacing: 0rem;
+    }
+
+    button {
+      background: transparent;
+      border: 1px solid $orange-primary;
+      color: $orange-primary;
+      font-size: 1.6rem;
+      height: 40px;
+      width: 160px;
+
+      &:hover {
+        color: white;
+        background: $orange-primary;
+      }
+    }
+  }
+}
+
+.auth-form-break {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+
+  &:before,
+  &:after {
+    opacity: 0.2;
+    content: "";
+    border-top: 1px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+  }
+
+  &:after {
+    margin: 0 0 0 20px;
   }
 }
