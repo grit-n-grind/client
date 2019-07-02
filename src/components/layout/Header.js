@@ -35,6 +35,7 @@ const Header = ({ firstName, lastName, city, state, page, setPage }) => {
         </button>
         <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
         <FaTrophy />
+        <div className={"margin-bottom-2"}></div>
       </div>
       {page && <ProfileNav page={page} setPage={setPage} navItems={navItems} />}
     </div>

@@ -8,7 +8,7 @@ const HeaderGym = ( { page, setPage, navItems } ) => {
     {/* <img className={ "dashboard_header-img" } src={ headerGym }/> */}
     <h1 className={ "dashboard_header-user-name" }>Name Placeholder</h1>
     <h3 className={ "dashboard_header-city" }>City Name</h3>
-    <div className="margin-bottom"></div>
+    <div className={"margin-bottom"}></div>
     <ProfileNav page={ page } setPage={ setPage } navItems={ navItems }/>
   </div> )
 }
