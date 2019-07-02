@@ -11,6 +11,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    & .active > span {
+      color: $orange-primary;
+    }
+
     &-item {
       span {
         font-size: 2rem;
@@ -19,6 +23,7 @@
       &-text {
         opacity: 1;
       }
+
       &:last-child {
         .nav-item-text {
           opacity: 0.3;
@@ -27,14 +32,15 @@
         .coming_soon {
           width: 101px;
           position: absolute;
-          font-size: 1.1rem;
+          font-size: .8rem;
           height: 15px;
           opacity: 1;
           line-height: 1rem;
-          padding: 4px;
+          padding: 5px;
           font-weight: 300;
-          background-color: #c54800;
-          border-radius: 4px;
+          background-color: $orange-secondary;
+          border-radius: 30px;
+          align-content: center;
         }
       }
     }

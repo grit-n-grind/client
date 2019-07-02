@@ -3,9 +3,21 @@ import headerImage from "../../assets/images/user-header-img.png"
 
 import { authHandler, useSession } from "../../hooks/useAuth"
 import { FaTrophy } from "react-icons/fa"
-import DashboardNav from "../User/DashboardNav"
+import ProfileNav from "../layout/ProfileNav"
 
 const Header = ({ firstName, lastName, city, state, page, setPage }) => {
+  const {
+    user: { gymOwner },
+  } = useSession()
+  const navItems = [
+    { name: "Goals", enabled: true },
+    { name: "Stats", enabled: true },
+    { name: "Leader Board", enabled: true },
+    { name: "Workout Log", enabled: true },
+    { name: "Create Gym", enabled: true },
+    { name: "Playlist", enabled: false },
+  ]
+
   return (
     <div
       className={"dashboard_header"}
@@ -14,18 +26,17 @@ const Header = ({ firstName, lastName, city, state, page, setPage }) => {
         backgroundPositionY: "center",
       }}>
       <div>
-      <h1
-        className={
-          "dashboard_header-user-name"
-        }>{`${firstName} ${lastName}`}</h1>
-      <button onClick={authHandler} className={"dashboard_logout-btn"}>
-        Logout
-      </button>
-      <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
-      <FaTrophy />
+        <h1
+          className={
+            "dashboard_header-user-name"
+          }>{`${firstName} ${lastName}`}</h1>
+        <button onClick={authHandler} className={"dashboard_logout-btn"}>
+          Logout
+        </button>
+        <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
+        <FaTrophy />
       </div>
-      { page &&
-      <DashboardNav page={ page } setPage={ setPage }/> }
+      {page && <ProfileNav page={page} setPage={setPage} navItems={navItems} />}
     </div>
   )
 }

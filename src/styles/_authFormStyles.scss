@@ -48,6 +48,15 @@
     }
   }
 
+  &_privacy {
+    font-size: 1.3rem;
+    font-weight: 500;
+    word-spacing: 0;
+    line-height: 2rem;
+    color: $grey;
+    margin: 20px 0;
+  }
+
   &_suggestion {
     display: flex;
     justify-content: space-between;

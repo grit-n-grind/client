@@ -1,11 +1,11 @@
 .user_dashboard {
-  width: 100vw;
+  width: calc(100vw-300px);
   min-height: 100vh;
   background-color: $black-dark;
   display: flex;
 
   &-content {
-    width: 100vh -300px;
+    width: 100%;
     min-height: 100%;
   }
 }
@@ -14,3 +14,89 @@
   min-height: calc(100vh - 250px);
 }
 
+.four-cols{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  .quarter{
+    h1{
+      font-weight: 300;
+      color: $orange-primary;
+      padding-right: 10px;
+    }
+    .two-thirds{
+      width: 70%;
+    
+    
+    h4{
+      font-size: 1.1rem;
+      letter-spacing: .1rem;
+     font-weight: 300; 
+     line-height: 1.3rem;
+    }
+    p{
+      font-size:1.1rem;
+      letter-spacing: .075rem;
+    }
+  }
+    display: flex;
+    justify-content: space-evenly;
+    @include material-shadow-mid;
+    width: 24%;
+    height: 60px;
+    align-items: center;
+    background-color: $black-light;
+    border-radius: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.two-cols{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  .one-quarter{
+    @include material-shadow-mid;
+    width: 24%;
+    height: 400px;
+    background-color: $black-light;
+    border-radius: 5px;
+  }
+  .three-quarters{
+    width: 74.5%;
+    .block{
+      @include material-shadow-mid;
+    display: block;
+    height: 195px;
+    margin-bottom: 10px;
+    background-color: $black-light;
+    border-radius: 5px;
+    padding: 25px;
+    .progressPics{
+      background-image: url('../assets/images/unsplash-track.jpg');
+      background-size: contain;
+      border-radius: 5px;
+      @include material-shadow-mid;
+      width: 23%;
+      margin-top: 15px;
+      height: 100px;
+      background-color: white;
+    }
+    h1{
+      color: $orange-primary;
+      line-height: 3.2rem;
+    }
+    p{
+      opacity: .5;
+    font-size: 1.4rem;
+    word-spacing: .17rem;
+    line-height: 2.4rem;
+    }
+    }
+  }
+}
+
+.width{
+  width: 100%;
+}
