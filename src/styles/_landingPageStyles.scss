@@ -1,53 +1,56 @@
 .landing-container {
-    display: flex;
-    justify-content: center;
-    margin-top:-120px;
-    background-image:url('../assets/Landing-Cover.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-      min-height: 110vh;
+  display: flex;
+  justify-content: center;
+  margin-top: -120px;
+  background-image: url("../assets/Landing-Cover.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 110vh;
   .left-landing {
-      width: 45%;
-      background: linear-gradient(to right, rgba(15, 15, 15, .09)85%, rgba(15,15,15, .05));
-    .landing-button{
+    width: 45%;
+    background: linear-gradient(
+      to right,
+      rgba(15, 15, 15, 0.09) 85%,
+      rgba(15, 15, 15, 0.05)
+    );
+    .landing-button {
       @include button;
-      &:hover{
+      @include button-gradient;
+      &:hover {
         cursor: pointer;
+      }
     }
+    .landing-content {
+      margin: 0 auto;
+      width: 65%;
+      height: 150px;
+      margin-top: 50vh;
+      margin-right: 20px;
+      h1,
+      image {
+        font-size: 4rem;
+        margin-bottom: 20px;
+      }
+      p {
+        font-family: "Open Sans";
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 300;
+        margin-bottom: 40px;
+        letter-spacing: 0.8px;
+        word-spacing: 0.08rem;
+      }
+      button {
+        @include button;
+        @include button-gradient;
+        font-size: 20px;
+        border-radius: 50px;
+        padding: 10px 40px;
+      }
     }
-    .landing-content{
-        margin: 0 auto;
-        width: 65%;
-        height: 150px;
-        margin-top: 50vh;
-        margin-right: 20px;
-        h1, image{
-          font-size: 4rem;
-          margin-bottom: 20px;
-        }
-        p{
-          font-family: "Open Sans";
-          font-size: 2rem;
-          line-height: 2.5rem;
-          font-weight: 300;
-          margin-bottom: 40px;
-          letter-spacing: .8px;
-          word-spacing: .08rem;
-        }
-        button{
-            
-            @include button;
-            font-size:20px;
-            border-radius: 50px;
-            padding: 10px 40px;
-        }
-    }
-    
   }
-  .right-landing{
-      width: 55%;
-      
+  .right-landing {
+    width: 55%;
   }
-
 }

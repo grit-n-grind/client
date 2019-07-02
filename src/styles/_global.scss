@@ -91,3 +91,8 @@ p {
   font-family: $openSans;
   font-size: 1.6rem;
 }
+
+.flex{
+  display:flex;
+  justify-content: space-between;
+}

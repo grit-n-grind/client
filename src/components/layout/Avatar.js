@@ -1,10 +1,11 @@
-import React from "react";
+import React from "react"
 
-const Avatar = props => {
-    return <div className={ props.className }>
-        <img className={'avatar_image'}
-            src={ "https://lh3.googleusercontent.com/-uQX3WtQRqmA/AAAAAAAAAAI/AAAAAAAAAIY/xKnec7XI1pI/photo.jpg" }/>
-    </div>;
-};
+const Avatar = ({ className, image }) => {
+  return (
+    <div className={className}>
+      <img className={"avatar_image"} src={image} />
+    </div>
+  )
+}
 
-export default Avatar;
+export default Avatar
