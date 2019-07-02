@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useForm } from "../hooks/useForm"
 import { FiZap } from "react-icons/fi"
+import moment from "moment"
 
 import FileUploader from "react-firebase-file-uploader"
 
@@ -9,6 +10,7 @@ import firebase, { store } from "../config/firebase"
 import { useSession } from "../hooks/useAuth"
 
 export default function AddJournal() {
+  console.log(moment().unix())
   const { auth } = useSession()
   const [values, handleChange, handleSubmit, setValues] = useForm(
     { weight: "", bodyFat: "", duration: "", progressPic: "" },
@@ -24,7 +26,7 @@ export default function AddJournal() {
       miles: 0,
       time: 0,
       description: "",
-      difficulty: "",
+      difficulty: 1,
     },
     handleExercises,
   )
@@ -69,16 +71,18 @@ export default function AddJournal() {
             <input
               type="number"
               name="weight"
-              placeholder="Weight"
+              placeholder="Body Weight"
               onChange={handleChange}
               value={values.weight}
+              required
             />
             <input
               type="number"
               name="bodyFat"
-              placeholder="Body Fat Percentage"
+              placeholder="Body Fat %"
               onChange={handleChange}
               value={values.bodyFat}
+              required
             />
             {/* DATE PICKER HERE */}
             <input
