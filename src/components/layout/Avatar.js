@@ -5,9 +5,7 @@ const Avatar = ({ className, image }) => {
     <div
       className={className}
       style={{
-        backgroundImage: `url(${image})`,
-        backgroundPosition: "center center",
-        backgroundSize: "cover",
+        backgroundImage: `url(${image})`
       }}
     />
   )

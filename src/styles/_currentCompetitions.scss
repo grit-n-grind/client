@@ -1,3 +1,10 @@
 .current_competitions {
-
+  width: 90%;
+  margin: 3rem auto;
+  background-color: $black-light;
+  min-height: calc(100vh - 350px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

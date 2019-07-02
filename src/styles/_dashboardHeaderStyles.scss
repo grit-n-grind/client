@@ -1,17 +1,21 @@
 .dashboard {
   &_header {
     height: 350px;
-    // width: calc(100vw - 300px);
+    width: 100%;
     overflow: hidden;
     position: relative;
     padding: 40px 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .block{
+      margin-bottom: 104px;
+    }
 
     &-img {
+      width: 100%;
       filter: opacity(0.2);
-      position: absolute;
       top: 0;
       left: 0;
     }
@@ -23,11 +27,19 @@
     }
 
     &-city {
+      text-transform: uppercase;
+      color: rgb(182, 182, 182);
       font-weight: 300;
       font-size: 3.6rem;
       margin-bottom: 24px;
       text-transform: capitalize;
     }
+    .margin-bottom{
+      margin-bottom: 138px;
+      }
+      .margin-bottom-2{
+        margin-bottom: 100px;
+      }
   }
 
   &_logout-btn {

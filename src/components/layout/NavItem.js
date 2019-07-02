@@ -15,7 +15,7 @@ const NavItem = ( { navItem, page, setPage } ) => {
     onClick={ () => setPage( navItem.name ) }
   >
     <span className="nav-item-text">{ navItem.name }</span>{ " " }
-    <span className="coming_soon">COMING SOON</span>
+    <span className="coming_soon">Coming Soon</span>
   
   </li> )
   

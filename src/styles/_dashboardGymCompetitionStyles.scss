@@ -1,12 +1,13 @@
 .owner_dashboard {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background-color: $black-dark;
     display: flex;
   
     &-content {
-      width: 100vh -300px;
+      width: 100%;
       min-height: 100%;
+      margin-left: 300px;
     }
     .sidebar{
         img{
