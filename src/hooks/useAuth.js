@@ -93,16 +93,10 @@ export const authHandler = (type, values) => {
       return firebase
         .auth()
         .signInWithEmailAndPassword(values.email, values.password)
-        .then(res => {
-          console.log(res)
-        })
     case EMAIL_AUTH_PROVIDER_SIGNUP:
       return firebase
         .auth()
         .createUserWithEmailAndPassword(values.email, values.password)
-        .then(res => {
-          console.log(res)
-        })
     case FACEBOOK_AUTH_PROVIDER:
       return firebase.auth().signInWithPopup()
     default:
