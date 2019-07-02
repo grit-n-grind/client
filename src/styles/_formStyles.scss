@@ -4,16 +4,13 @@ input {
   background: $black-dark;
   height: 50px;
   border-radius: 4px;
+  padding: 0 15px;
 
   &::placeholder {
     font-family: $poppins;
     font-size: 2rem;
     font-weight: 400;
-    padding: 0 10px;
-    height: 50px;
-  }
-
-  &::focus {
-    padding: 0 10px;
+    vertical-align: 10px;
+    line-height: 50px;
   }
 }
