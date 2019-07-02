@@ -5,7 +5,13 @@ import FileUploader from "react-firebase-file-uploader"
 
 import firebase, { store } from "../../config/firebase"
 
+import { useSession } from "../../hooks/useAuth"
+import slugify from "slugify"
+
 const CreateGym = () => {
+  const {
+    auth: { uid },
+  } = useSession()
   const [gym, handleChanges, handleSubmit, setValues] = useForm(
     { name: "", state: "", city: "", zip: "", address: "", logo: "" },
     addGym,
@@ -13,9 +19,18 @@ const CreateGym = () => {
 
   function addGym() {
     console.log(gym)
+    const slug = slugify(`${gym.name} ${gym.city}`, {
+      replacement: "-",
+      lower: true,
+    })
     store
       .collection("gyms")
-      .add(gym)
+      .doc(slug)
+      .set({
+        owner: uid,
+        slug: slug,
+        ...gym,
+      })
       .then(res => {
         console.log(res)
       })
