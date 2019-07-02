@@ -31,14 +31,15 @@
 
         .coming_soon {
           position: absolute;
-          font-size: 1.1rem;
+          font-size: .8rem;
           height: 15px;
           opacity: 1;
           line-height: 1rem;
-          padding: 4px;
+          padding: 5px;
           font-weight: 300;
-          background-color: #c54800;
-          border-radius: 4px;
+          background-color: $orange-secondary;
+          border-radius: 30px;
+          align-content: center;
         }
       }
     }

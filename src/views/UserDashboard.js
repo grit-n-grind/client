@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Sidebar from "../components/layout/Sidebar"
 import Header from "../components/layout/Header"
 import Avatar from "../components/layout/Avatar"
-import DashboardContent from "../components/User/DashboardContent"
+import DashboardContent from "../components/layout/DashboardContent"
 import { useSession } from "../hooks/useAuth"
 
 const UserDashboard = () => {
