@@ -33,58 +33,59 @@ const CreateGym = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="name"
-        name="name"
-        placeholder="Name"
-        onChange={handleChanges}
-        value={gym.name}
-      />
+    <form onSubmit={handleSubmit} autoComplete="off">
+      <label htmlFor="Gym Information">
+        GYM INFORMATION
+        <input
+          type="name"
+          name="name"
+          placeholder="Name"
+          onChange={handleChanges}
+          value={gym.name}
+        />
+        <input
+          type="name"
+          name="address"
+          placeholder="Address"
+          onChange={handleChanges}
+          value={gym.address}
+        />
+        <input
+          type="name"
+          name="city"
+          placeholder="City"
+          onChange={handleChanges}
+          value={gym.city}
+        />
+        <input
+          type="name"
+          name="state"
+          placeholder="State"
+          onChange={handleChanges}
+          value={gym.state}
+        />
+        <input
+          type="number"
+          name="zip"
+          placeholder="Zip"
+          onChange={handleChanges}
+          value={gym.zip}
+        />
+      </label>
 
-      <input
-        type="name"
-        name="state"
-        placeholder="State"
-        onChange={handleChanges}
-        value={gym.state}
-      />
-
-      <input
-        type="name"
-        name="city"
-        placeholder="City"
-        onChange={handleChanges}
-        value={gym.city}
-      />
-
-      <input
-        type="number"
-        name="zip"
-        placeholder="Zip"
-        onChange={handleChanges}
-        value={gym.zip}
-      />
-
-      <input
-        type="name"
-        name="address"
-        placeholder="Address"
-        onChange={handleChanges}
-        value={gym.address}
-      />
-
-      <FileUploader
-        accept="image/*"
-        name="gymLogo"
-        randomizeFilename
-        storageRef={firebase.storage().ref(`gymLogo/`)}
-        // onUploadStart={this.handleUploadStart}
-        // onUploadError={this.handleUploadError}
-        onUploadSuccess={handleUpload}
-        // onProgress={this.handleProgress}
-      />
-
+      <label htmlFor="Gym Logo">
+        UPLOAD A
+        <FileUploader
+          accept="image/*"
+          name="gymLogo"
+          randomizeFilename
+          storageRef={firebase.storage().ref(`gymLogo/`)}
+          // onUploadStart={this.handleUploadStart}
+          // onUploadError={this.handleUploadError}
+          onUploadSuccess={handleUpload}
+          // onProgress={this.handleProgress}
+        />
+      </label>
       <button>Create Gym</button>
     </form>
   )

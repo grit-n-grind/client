@@ -49,11 +49,13 @@
   }
 
   &_privacy {
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-family: $poppins;
+    font-size: 1.1rem;
+    font-weight: 400;
     word-spacing: 0;
+    opacity: 0.5;
     line-height: 2rem;
-    color: $grey;
+    color: $white;
     margin: 20px 0;
   }
 

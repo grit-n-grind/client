@@ -64,11 +64,11 @@ button {
 button {
   cursor: pointer;
   border: none;
-  transition: 0.3s;
+  transition: 0.2s;
 
   &:hover {
-    transform: translateY(-1px);
-    opacity: 0.9;
+    // transform: translateY(-1px);
+    opacity: 0.85;
   }
 
   // &:active {
@@ -87,7 +87,8 @@ input {
   }
 }
 
-p, li {
+p,
+li {
   font-family: $openSans;
   font-size: 1.6rem;
 }

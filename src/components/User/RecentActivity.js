@@ -24,20 +24,21 @@ const RecentActivity = () => {
     <div className="recent_activities">
       <p>Recent activity</p>
       <div className="activity">
-        {exercises.map(ex => {
-          return (
-            <div className="activity_card">
-              <div className="activity_type">
-                <FaRunning />
-                <div className="activity_info">
-                  <p>{ex.name}</p>
-                  <p>{ex.time}</p>
+        {exercises &&
+          exercises.map(ex => {
+            return (
+              <div className="activity_card">
+                <div className="activity_type">
+                  <FaRunning />
+                  <div className="activity_info">
+                    <p>{ex.name}</p>
+                    <p>{ex.time}</p>
+                  </div>
                 </div>
+                <div className="activity_value">{ex.value}</div>
               </div>
-              <div className="activity_value">{ex.value}</div>
-            </div>
-          )
-        })}
+            )
+          })}
       </div>
     </div>
   )
