@@ -16,16 +16,17 @@ const Header = () => {
         background: `linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(34, 34, 31, 1)), url('${headerImage}')`,
         backgroundPositionY: "center",
       }}>
-      {/* <img className={"dashboard_header-img"} src={headerImage} /> */}
-      <h1
-        className={
-          "dashboard_header-user-name"
-        }>{`${firstName} ${lastName}`}</h1>
-      <button onClick={authHandler} className={"dashboard_logout-btn"}>
-        Logout
-      </button>
-      <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
-      <FaTrophy />
+      <div>
+        <h1
+          className={
+            "dashboard_header-user-name"
+          }>{`${firstName} ${lastName}`}</h1>
+        <button onClick={authHandler} className={"dashboard_logout-btn"}>
+          Logout
+        </button>
+        <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
+        <FaTrophy />
+      </div>
       <DashboardNav />
     </div>
   )
