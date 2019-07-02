@@ -5,8 +5,9 @@
   display: flex;
 
   &-content {
-    width: 100vh -300px;
-    min-height: 100%;
+    width: calc(100vw - 300px);
+    min-height: 100vh;
+    height: 100%;
   }
 }
 
