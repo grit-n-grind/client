@@ -1,15 +1,21 @@
 .competition_card {
-  width: 47.5%;
-  background: $black-main;
+  max-width: 47%;
+  width: 48.5%;
+  margin-top: 1rem;
   color: white;
   border-radius: 4px;
   font-family: $openSans;
   margin: 10px;
-  @include material-shadow-low;
+  @include material-shadow-mid;
+
+  @media (max-width:1000px){
+    max-width: 85%;
+    width: 90%;
+  }
 
   .competition_card_header {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
-      url("../assets/images/unsplash-track.jpg"), rgba(0, 0, 0, 0.1);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("../assets/images/unsplash-track.jpg"), rgba(0, 0, 0, 0.1);
     background-size: cover;
     background-position: center;
     border-radius: 4px 4px 0 0;
@@ -21,6 +27,7 @@
 
     .competition_card_title {
       h2 {
+        color: white;
         font-family: $poppins;
         font-weight: 700;
         font-size: 2.4rem;
@@ -33,7 +40,7 @@
         margin: 0;
         font-family: $lato;
         font-size: 3.6rem;
-        color: $orange-primary;
+        color: $orange-secondary;
         font-weight: 300;
       }
     }
@@ -42,9 +49,16 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-
+      svg {
+        color: $orange-primary;
+        margin-bottom: -4px;
+      }
       span {
+        padding: 3px;
+        font-family: 'Open Sans';
         font-size: 1.6rem;
+        color: white;
+        font-weight: 400;
       }
 
       button {

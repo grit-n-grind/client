@@ -3,6 +3,7 @@ import headerGym from "../../assets/images/GymHeader.jpg"
 import ProfileNav from "./ProfileNav"
 import { authHandler, useSession } from "../../hooks/useAuth"
 import DashboardContent from "./DashboardContent"
+import { useGymData } from "../../hooks/useGymsData"
 
 const HeaderGym = ( { page, setPage, navItems } ) => {
   return ( <div className={ "dashboard_header" } style={{background: `linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(34, 34, 31, 1)), url('${ headerGym }')`,

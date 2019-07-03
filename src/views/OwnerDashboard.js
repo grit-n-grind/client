@@ -3,10 +3,11 @@ import Sidebar from "../components/layout/Sidebar"
 import HeaderGym from "../components/layout/HeaderGym"
 import Avatar from "../components/layout/Avatar"
 import DashboardContent from "../components/layout/DashboardContent"
-import CompetitionCard from "../components/Competition/CompetitionCard";
+import { useSession } from "../hooks/useAuth"
 
 const OwnerDashboard = () => {
   
+  const { user } = useSession()
   const [ page, setPage ] = useState( "Competitions" )
   
   const navItems = [
@@ -46,8 +47,9 @@ const OwnerDashboard = () => {
       </div>
     </Sidebar>
     <section className={ "owner_dashboard-content" }>
-      <HeaderGym page={ page } setPage={ setPage } navItems={ navItems }/>
-      <DashboardContent page={ page }/>
+      <HeaderGym page={ page } setPage={ setPage } navItems={ navItems }
+                 gymId={ user.gym }/>
+      <DashboardContent page={ page } gym={ user.gym }/>
     </section>
   </div> )
 }
