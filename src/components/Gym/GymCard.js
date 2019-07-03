@@ -16,7 +16,9 @@ const GymCard = ({ gym }) => {
             <span>
               <FaRegUserCircle size="20px" />
             </span>
-            <span>7 Participants</span>
+            <span style={{ marginLeft: "10px", wordSpacing: "0.1rem" }}>
+              2 Active Competitions
+            </span>
           </div>
           <Link to={`/gym/${gym.slug}`}>
             <button>OPEN</button>

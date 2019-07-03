@@ -1,5 +1,6 @@
 import React from "react"
-import headerImage from "../../assets/images/user-header-img.png"
+// import headerImage from "../../assets/images/user-header-img.png"
+import headerImage from "../../assets/images/header-img.jpg"
 
 import { authHandler, useSession } from "../../hooks/useAuth"
 import { FaTrophy } from "react-icons/fa"
@@ -34,7 +35,7 @@ const Header = ({ firstName, lastName, city, state, page, setPage }) => {
           Logout
         </button>
         <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
-        <FaTrophy />
+        {/* <FaTrophy /> */}
         <div className={"margin-bottom-2"} />
       </div>
       {page && <ProfileNav page={page} setPage={setPage} navItems={navItems} />}
