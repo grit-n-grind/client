@@ -10,7 +10,6 @@ import firebase, { store } from "../config/firebase"
 import { useSession } from "../hooks/useAuth"
 
 export default function AddJournal() {
-  console.log(moment().unix())
   const { auth } = useSession()
   const [values, handleChange, handleSubmit, setValues] = useForm(
     { weight: "", bodyFat: "", duration: "", progressPic: "" },
@@ -35,15 +34,11 @@ export default function AddJournal() {
 
   function handleAddJournal() {
     const journal = { ...values, exercises }
-    console.log(journal)
     store
       .collection("users")
       .doc(auth.uid)
       .collection("journals")
-      .add(journal)
-      .then(res => {
-        console.log(res)
-      })
+      .add({ createdAt: moment().unix(), ...journal })
   }
 
   function handleExercises(e) {
