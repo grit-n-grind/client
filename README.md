@@ -14,8 +14,6 @@ The first web application of its kind: Grit-N-Grind is a fitness competition app
 
 * Add Goals, Workouts, Progress Pictures
 
-* Join a Gym
-
 * Create a Gym Account
 
 * Join a Competition
