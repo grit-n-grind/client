@@ -33,7 +33,7 @@ const CurrentCompetitions = ({ gym }) => {
             duration="June 1, 2019 to June 30, 2019"
           />
           <CompetitionCard
-            name="One Punch Man Challenge"
+            name="One Punch Man Workout"
             prize="1,000"
             image={onepunch}
             participants="12"
