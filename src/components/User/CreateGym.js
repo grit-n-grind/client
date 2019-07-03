@@ -89,7 +89,7 @@ const CreateGym = () => {
       </label>
 
       <label htmlFor="Gym Logo">
-        UPLOAD A
+        UPLOAD YOUR LOGO
         <FileUploader
           accept="image/*"
           name="gymLogo"

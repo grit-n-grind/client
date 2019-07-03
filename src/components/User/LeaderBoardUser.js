@@ -3,17 +3,20 @@ import LeaderBoardAvatar from "./LeaderBoardAvatar"
 import { FaTrophy } from "react-icons/fa"
 
 const LeaderBoardUser = props => {
-  return ( <div className={ "leader_board_user" }>
-    <LeaderBoardAvatar/>
-    <div className={ "leader_board_details" }>
-      { props.name && <p className={ "user-name" }>{ props.name }</p> }
-      <div className={ "trophies" }>
-        <FaTrophy className={ "trophy" }/><p>5</p><FaTrophy
-        className={ "trophy" }/><p>7</p>
+  return (
+    <div className={"leader_board_user"}>
+      <div className={"leader_board_details"}>
+        <LeaderBoardAvatar name={props.name} />
+        {props.name && <p className={"user-name"}>{props.name}</p>}
+      </div>
+      <div>
+        <span className="leader_board_place">
+          {props.place}
+          <FaTrophy className={"trophy"} />
+        </span>
       </div>
     </div>
-  
-  </div> )
+  )
 }
 
 export default LeaderBoardUser

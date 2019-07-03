@@ -4,12 +4,19 @@
   min-height: 90%;
   height: 100%;
   margin: 0 auto 5rem auto;
+  border-radius: 4px;
 
   &_avatar {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background-color: $black-dark;
+    margin-right: 10px;
+
+    span:last-of-type {
+      font-weight: 400;
+      font-size: 2rem;
+    }
   }
 
   &_users {
@@ -20,24 +27,37 @@
 
   &_user {
     display: flex;
-    margin: 3rem;
     align-items: center;
-    padding-bottom: 4px;
-    border-bottom: 1px solid $black-main;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
     & .user-name {
       margin-left: 3rem;
     }
   }
 
+  &_place {
+    font-family: $openSans;
+    font-weight: 300;
+    font-size: 3rem;
+
+    svg {
+      width: 20px;
+      margin-bottom: -5px;
+      margin-left: 7px;
+      color: $orange-primary;
+    }
+  }
+
   &_details {
-    width: 100px;
+    max-width: 300px;
     display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
+    align-items: center;
 
     & .user-name {
       margin-left: 1rem;
+      max-width: 375px;
     }
 
     & .trophies {
