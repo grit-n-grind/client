@@ -19,12 +19,10 @@ import OwnerDashboard from "./views/OwnerDashboard"
 export default function App() {
   const reducer = useAuth()
   const [animate, setAnimate] = useState(true)
-  console.log(reducer.state)
   setTimeout(() => setAnimate(false), 1000) // Make sure to finish one round of loading
   if (reducer.state.initializing || animate) {
     return (
       <div className="loader">
-        {/* <h3>Loading...</h3> */}
         <img src={loader} alt="loader" className="loader_img" />
       </div>
     )

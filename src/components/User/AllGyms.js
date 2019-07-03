@@ -19,7 +19,6 @@ const AllGyms = ({ gym }) => {
     return () => unsubscribe()
   }, [])
 
-  console.log(state)
   return (
     <div className={"current_competitions"}>
       {state.gyms.map(gym => (

@@ -1,12 +1,11 @@
 .landing-container {
   display: flex;
   justify-content: center;
-  margin-top: -120px;
   background-image: url("../assets/Landing-Cover.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 110vh;
+  min-height: 100vh;
   .left-landing {
     width: 45%;
     background: linear-gradient(

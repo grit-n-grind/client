@@ -23,7 +23,6 @@ const WorkoutLog = () => {
       .collection("journals")
       .limit(10)
       .onSnapshot(snapShot => {
-        console.log(snapShot)
         let items = []
         snapShot.forEach(doc => {
           items.push({ ...doc.data() })
@@ -35,8 +34,6 @@ const WorkoutLog = () => {
     return () => unsubscribe()
   }, [])
 
-  console.log(journals)
-
   return (
     <div className="workout_log">
       <div className="exercises_to_submit">
@@ -45,7 +42,6 @@ const WorkoutLog = () => {
         </Link>
         {journals.map(journal => (
           <div className="exercise_card">
-            {console.log(journal)}
             <h1>{journal.exercises[0].name}</h1>
             <h1>{journal.exercises[0].description}</h1>
             <h1>{journal.exercises[0].difficulty}</h1>

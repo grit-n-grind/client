@@ -36,7 +36,7 @@ const OwnerDashboard = ({ match: { params } }) => {
     <div className={"owner_dashboard"}>
       <Sidebar className="sidebar">
         <div>
-          <Avatar className={"avatar"} />
+          <Avatar className={"avatar"} image={state.logo} />
           <p style={{ textAlign: "center", lineHeight: "2.4rem" }} />
           <p style={{ textAlign: "center", lineHeight: "2.4rem" }}>
             {state.city}, {state.state}

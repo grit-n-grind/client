@@ -24,7 +24,6 @@ const LeaderBoard = () => {
       let items = []
       snap.forEach(doc => {
         const data = doc.data()
-        console.log(data)
         items.push({
           name: `${data.firstName} ${data.lastName}`,
         })
@@ -34,7 +33,6 @@ const LeaderBoard = () => {
       setLoading(false)
     })
 
-    console.log(users)
     return () => unsubscribe()
   }, [])
 

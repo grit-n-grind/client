@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 const Landing = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="landing-container">
         <div className="left-landing">
           {/* <button className='landing-button'>Hello Landing</button> */}

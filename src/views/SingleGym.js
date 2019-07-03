@@ -7,7 +7,6 @@ import { useSession } from "../hooks/useAuth"
 
 export default function SingleGym({ match: { params } }) {
   const [state, setstate] = useState({ isLoading: true, error: false })
-  console.log(params)
   useEffect(() => {
     const unsubscribe = store
       .collection("gyms")
@@ -23,6 +22,5 @@ export default function SingleGym({ match: { params } }) {
     return () => unsubscribe()
   }, [])
 
-  console.log(state)
   return <div />
 }

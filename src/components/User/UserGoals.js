@@ -20,7 +20,6 @@ const UserGoals = () => {
         let items = []
         snapShot.forEach(doc => {
           const data = doc.data()
-          console.log(data)
           items.push({ id: doc.id, ...data })
         })
         setstate({ ...state, isLoading: false, data: items })
@@ -28,8 +27,6 @@ const UserGoals = () => {
 
     return () => unsubscribe()
   }, [])
-
-  console.log(state)
 
   const data = {
     labels: [

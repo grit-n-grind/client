@@ -18,7 +18,6 @@ const CreateGym = () => {
   )
 
   function addGym() {
-    console.log(gym)
     const slug = slugify(`${gym.name} ${gym.city}`, {
       replacement: "-",
       lower: true,
@@ -30,9 +29,6 @@ const CreateGym = () => {
         owner: uid,
         slug: slug,
         ...gym,
-      })
-      .then(res => {
-        console.log(res)
       })
   }
 
