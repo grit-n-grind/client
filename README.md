@@ -1,8 +1,6 @@
 <h1 align="center">Welcome to Grit-N-Grind 👋</h1>
 <p>
   <img src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/giturl.git">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
 </p>
 
