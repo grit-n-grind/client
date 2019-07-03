@@ -8,6 +8,9 @@
       width: 100%;
       min-height: 100%;
       margin-left: 300px;
+      @media (max-width:950px){
+        margin-left:0px;
+      }
     }
     .sidebar{
         img{
