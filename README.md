@@ -27,7 +27,7 @@ The first web application of its kind: Grit-N-Grind is a fitness competition app
 
 ## Author
 
-👤 ** Anthony Venturini **
+👤 **Anthony Venturini **
 
 - Github: [adventurini](https://github.com/adventurini)
 
