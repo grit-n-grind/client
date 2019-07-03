@@ -1,22 +1,282 @@
+.button-google {
+  background: $white;
+  color: $black-dark;
+}
+
+.button-facebook {
+  background: $facebook-blue;
+}
+
+.auth-container {
+  background: $black-light;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+
+  &_wrapper {
+    @include material-shadow-low;
+    border-radius: 4px;
+    padding: 20px;
+    background: $black-dark;
+  }
+}
+
 .login-container {
   display: flex;
   flex-direction: column;
   width: 500px;
   padding: 20px;
 
+  input {
+    margin: 5px 0;
+  }
+
   button {
     height: 60px;
-    border-radius: 5px;
+    border-radius: 4px;
     margin: 5px 0;
+    font-size: 2rem;
   }
 
   &_form {
     display: flex;
     flex-direction: column;
+
+    button {
+      @include button-gradient;
+    }
+  }
+
+  &_privacy {
+    font-family: $poppins;
+    font-size: 1.1rem;
+    font-weight: 400;
+    word-spacing: 0;
+    opacity: 0.5;
+    line-height: 2rem;
+    color: $white;
+    margin: 20px 0;
   }
 
   &_suggestion {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    margin-top: 50px;
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 700;
+      word-spacing: 0rem;
+    }
+
+    button {
+      background: transparent;
+      border: 1px solid $orange-primary;
+      color: $orange-primary;
+      font-size: 1.6rem;
+      height: 40px;
+      width: 160px;
+
+      &:hover {
+        color: white;
+        background: $orange-primary;
+      }
+    }
+  }
+}
+
+.auth-form-break {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+
+  &:before,
+  &:after {
+    opacity: 0.2;
+    content: "";
+    border-top: 1px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+  }
+
+  &:after {
+    margin: 0 0 0 20px;
+  }
+}
+
+.add_journal {
+  margin: 0 auto;
+  background: $black-dark;
+  min-height: 100vh;
+  // padding: 0 60px;
+  display: flex;
+
+  p {
+    color: $orange-primary;
+    font-family: $poppins;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  &_form_group {
+    background: $black-main;
+    position: fixed;
+    min-height: 100vh;
+    @include material-shadow-mid;
+    padding: 30px 60px;
+
+    h2 {
+      color: $white;
+      font-size: 2.4rem;
+      font-weight: 300;
+    }
+
+    form {
+      min-width: 375px;
+      max-width: 400px;
+      background: $black-main;
+      // padding: 20px 30px;
+      border-radius: 4px;
+
+      input {
+        margin-bottom: 10px;
+        height: 40px;
+        font-size: 1.6rem;
+        border-radius: 2px;
+        border: 1px solid #555;
+
+        &:focus {
+          border: 1px solid #888;
+        }
+
+        &:first-of-type {
+          margin-top: 6px;
+        }
+
+        &::placeholder {
+          font-size: 1.6rem;
+        }
+      }
+
+      input[type="file"] {
+        display: block;
+        background: transparent;
+        border: none;
+        color: $grey;
+        font-size: 1.6rem;
+        height: 40px;
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  button {
+    @include button;
+    @include button-inverted;
+    padding: 8px 16px;
+    font-size: 1.6rem;
+    width: 100%;
+    font-weight: 300;
+    margin-top: 15px;
+  }
+
+  .exercises_to_submit {
+    display: flex;
+    flex-direction: column;
+    margin-left: 540px;
+    min-height: 500px;
+    width: 100%;
+    padding-top: 60px;
+
+    h2,
+    h3 {
+      color: $white;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      opacity: 0.5;
+      font-size: 2rem;
+    }
+
+    .exercise_card {
+      max-width: 1000px;
+      border-radius: 4px;
+      justify-content: space-between;
+      display: flex;
+      padding: 10px;
+      margin: 0 auto 15px;
+      width: 90%;
+      background: $black-main;
+      @include material-shadow-low;
+      // filter: contrast(140%);
+
+      svg {
+        margin-top: 14px;
+        margin-right: 10px;
+        color: $orange-primary;
+      }
+
+      p {
+        color: $white;
+      }
+
+      .exercise_title {
+        & > p {
+          font-size: 3rem;
+          font-family: $poppins;
+          font-weight: 700;
+        }
+
+        & > p:last-of-type {
+          font-size: 2rem;
+          font-weight: 400;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .exercise_details {
+      display: flex;
+      min-width: 50%;
+      justify-content: space-evenly;
+
+      p {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+
+      span {
+        display: block;
+        padding-top: 6px;
+        color: $orange-primary;
+        font-weight: 300;
+        font-family: $openSans;
+      }
+    }
+
+    button {
+      @include button;
+      @include button-gradient;
+      height: 50px;
+      align-self: flex-end;
+      max-width: 300px;
+      font-size: 2rem;
+      margin: 0 auto;
+    }
   }
 }

@@ -1,0 +1,29 @@
+.owner_dashboard {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $black-dark;
+    display: flex;
+  
+    &-content {
+      width: 100%;
+      min-height: 100%;
+      margin-left: 300px;
+      @media (max-width:950px){
+        margin-left:0px;
+      }
+    }
+    .sidebar{
+        img{
+            text-align:center;
+        }
+        .gym-content{
+            padding: 5rem;
+            p{
+                line-height: 2.9rem
+            }
+            color{
+
+            }
+        }
+    }
+  }

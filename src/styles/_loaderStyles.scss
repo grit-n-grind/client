@@ -1,0 +1,13 @@
+.loader {
+  min-height: 100vh;
+  background: $black-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &_img {
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+  }
+}

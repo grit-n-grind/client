@@ -1,13 +1,27 @@
 .avatar {
   background-color: $grey;
-  width: 70%;
-  height: 0.7 * 300px;
+  max-width: 0.7 * 270px;
+  height: 0.7 * 270px;
   border-radius: 50%;
   margin: 0 auto;
-  padding-top: 2rem;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 10px;
+
+  &_image {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .square {
+  width: 160px;
   border-radius: 4%;
-  background-color: black;
+  background-color: $black-dark;
+  background-image: url(../assets/images/kisspng-crunch-anderson-crunch-fitness-crunch-carrollw-gym-5ac4a1029034a2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 130px;
+  margin-bottom: 20px;
 }

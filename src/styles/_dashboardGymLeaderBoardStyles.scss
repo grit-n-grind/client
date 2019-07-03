@@ -1,0 +1,79 @@
+.leader_board {
+  background-color: $black-light;
+  width: 90%;
+  min-height: 90%;
+  height: 100%;
+  margin: 0 auto 5rem auto;
+  border-radius: 4px;
+
+  &_avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $black-dark;
+    margin-right: 10px;
+
+    span:last-of-type {
+      font-weight: 400;
+      font-size: 2rem;
+    }
+  }
+
+  &_users {
+    padding-top: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  &_user {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:last-of-type {
+      border: none;
+    }
+
+    & .user-name {
+      margin-left: 3rem;
+    }
+  }
+
+  &_place {
+    font-family: $openSans;
+    font-weight: 300;
+    font-size: 3rem;
+
+    svg {
+      width: 20px;
+      margin-bottom: -5px;
+      margin-left: 7px;
+      color: $orange-primary;
+    }
+  }
+
+  &_details {
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+
+    & .user-name {
+      margin-left: 1rem;
+      max-width: 375px;
+    }
+
+    & .trophies {
+      margin-top: 7px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      color: $orange-primary;
+
+      & p {
+        color: white;
+      }
+    }
+  }
+}

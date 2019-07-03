@@ -7,8 +7,8 @@ export const useForm = (initalState, callback) => {
     if (e) {
       e.preventDefault()
     }
-    setValue(initalState)
     callback()
+    setValue(initalState)
   }
 
   const handleChange = e => {
@@ -27,5 +27,5 @@ export const useForm = (initalState, callback) => {
     })
   }
 
-  return [values, handleChange, handleSubmit]
+  return [values, handleChange, handleSubmit, setValue]
 }
