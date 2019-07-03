@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> Project Name is a fitness competition application built with React, Hooks, Context, and Firebase.
+> Grit-N-Grind is a fitness competition application built with React, Hooks, Context, and Firebase. Built during (Lambda School's)[https://lambdaschool.com] open Hack-a-thon.
 
 ### 🏠 [Grit-N-Grind](https://gritngrind.fitness)
 
@@ -14,15 +14,15 @@ The first web application of its kind: Grit-N-Grind is a fitness competition app
 
 **FULL CRUD features:**
 
-#### •Add Goals, Workouts, Progress Pictures
+•Add Goals, Workouts, Progress Pictures
 
-#### •Join a Gym
+•Join a Gym
 
-#### •Create a Gym Account
+•Create a Gym Account
 
-#### •Join a Competition
+•Join a Competition
 
-#### •Create a Competition
+•Create a Competition
 
 
 ## Author
