@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Route, Switch, Redirect } from "react-router-dom"
 import { userContext, useAuth } from "./hooks/useAuth"
 import loader from "./assets/loader.svg"
@@ -18,8 +18,10 @@ import OwnerDashboard from "./views/OwnerDashboard"
 
 export default function App() {
   const reducer = useAuth()
+  const [animate, setAnimate] = useState(true)
   console.log(reducer.state)
-  if (reducer.state.initializing) {
+  setTimeout(() => setAnimate(false), 1000) // Make sure to finish one round of loading
+  if (reducer.state.initializing || animate) {
     return (
       <div className="loader">
         {/* <h3>Loading...</h3> */}
