@@ -26,7 +26,7 @@ const CurrentCompetitions = ({ gym }) => {
       ) : (
         <>
           <CompetitionCard
-            name="Sprint Challenge"
+            name="Sprint Challenge 1"
             prize="2,000"
             image={sprint}
             participants="46"
@@ -47,7 +47,7 @@ const CurrentCompetitions = ({ gym }) => {
             duration="August 1, 2019 to August 31, 2019"
           />
           <CompetitionCard
-            name="Sprint Challenge"
+            name="Sprint Challenge 2"
             prize="2,000"
             image={sprint}
             participants="12"
