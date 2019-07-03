@@ -8,9 +8,25 @@
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    .block{
+
+    .block {
       margin-bottom: 104px;
+    }
+    h1 {
+      @media (max-width: 800px) {
+        line-height: 3rem;
+        font-size: 3.2rem;
+        margin-bottom: 12px;
+      }
+      @media (max-width: 480px) {
+        font-size: 2.2rem;
+        margin-top: 35px;
+      }
+    }
+    h3 {
+      @media (max-width: 800px) {
+        font-size: 2.1rem;
+      }
     }
 
     &-img {
@@ -34,12 +50,12 @@
       margin-bottom: 24px;
       text-transform: capitalize;
     }
-    .margin-bottom{
+    .margin-bottom {
       margin-bottom: 138px;
-      }
-      .margin-bottom-2{
-        margin-bottom: 100px;
-      }
+    }
+    .margin-bottom-2 {
+      margin-bottom: 100px;
+    }
   }
 
   &_logout-btn {
