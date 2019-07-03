@@ -48,7 +48,7 @@ export default function App() {
         <Route
           exact
           path="/gym/:slug"
-          render={props => <SingleGym {...props} />}
+          render={props => <OwnerDashboard {...props} />}
         />
         <Redirect to="/dashboard" />
       </Switch>
