@@ -8,19 +8,28 @@
 
 > Project Name is a fitness competition application built with React, Hooks, Context, and Firebase.
 
-### 🏠 [Homepage](Project Url)
+### 🏠 [Grit-N-Grind](https://gritngrind.fitness)
 
-## Install
+The first web application of its kind: Grit-N-Grind is a fitness competition application that gyms can use to throw competitions at their local gyms.
 
-```sh
-npm install
-```
+**FULL CRUD features:**
+
+#### Add Goals, Workouts, Progress Pictures
+
+#### Join a Gym
+
+#### Create a Gym Account
+
+#### Join a Competition
+
+#### Create a Competition
+
 
 ## Author
 
-👤 ** Your Name **
+👤 ** Anthony Venturini **
 
-- Github: [Git Name](GitUrl)
+- Github: [adventurini](https://github.com/adventurini)
 
 ## Show your support
 
