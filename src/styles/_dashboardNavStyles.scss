@@ -1,9 +1,9 @@
 .dashboard-nav {
   width: 100%;
+  max-width: 1000px;
   padding-bottom: 50px;
   z-index: 15;
   display: flex;
-  
 
   & .nav {
     width: 100%;
@@ -11,7 +11,7 @@
     font-size: 16px;
     justify-content: space-between;
     flex-wrap: wrap;
-   
+
     & .active > span {
       color: $orange-primary;
     }
@@ -21,9 +21,9 @@
         font-size: 1.6rem;
         font-weight: 300;
         padding: 7px;
-        letter-spacing: .05rem;
-        &:hover{
-          cursor:pointer;
+        letter-spacing: 0.05rem;
+        &:hover {
+          cursor: pointer;
         }
       }
 
@@ -34,26 +34,25 @@
       &:last-child {
         .nav-item-text {
           opacity: 0.3;
-          &:hover{
-            cursor:pointer;
+          &:hover {
+            cursor: pointer;
           }
         }
-       
 
         .coming_soon {
           width: 101px;
           position: absolute;
-          letter-spacing: .05rem;
-          font-size: .72rem;
+          letter-spacing: 0.05rem;
+          font-size: 0.72rem;
           opacity: 1;
           line-height: 1rem;
-          margin-left:2px;
+          margin-left: 2px;
           padding: 4px;
           font-weight: 400;
           color: $orange-primary;
           border: $orange-primary 1px solid;
           border-radius: 8px;
-          opacity:.7;
+          opacity: 0.7;
         }
       }
     }
