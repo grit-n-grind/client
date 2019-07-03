@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, Switch } from "react-router-dom"
+import { Route, Switch, Redirect } from "react-router-dom"
 import { userContext, useAuth } from "./hooks/useAuth"
 
 // Componentss
@@ -48,8 +48,9 @@ export default function App() {
         <Route
           exact
           path="/gym/:slug"
-          render={props => <SingleGym {...props} />}
+          render={props => <OwnerDashboard {...props} />}
         />
+        <Redirect to="/dashboard" />
       </Switch>
     </userContext.Provider>
   )

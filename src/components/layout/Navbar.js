@@ -1,5 +1,7 @@
 import React from "react"
 
+import { Link } from "react-router-dom"
+
 import "../../styles/index1.scss"
 import WhiteLogo from "../../assets/WhiteLogo"
 import Button from "./Button"
@@ -46,8 +48,12 @@ const Navbar = () => {
     <div style={outerContainer}>
       <WhiteLogo />
       <div style={style}>
-        <p style={marginRight}>LOGIN</p>
-        <Button style={buttonStyle} text="JOIN" />
+        <Link to="/login">
+          <p style={marginRight}>LOGIN</p>
+        </Link>
+        <Link to="/register">
+          <Button style={buttonStyle} text="JOIN" />
+        </Link>
       </div>
     </div>
   )

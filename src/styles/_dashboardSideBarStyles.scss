@@ -4,6 +4,10 @@
   width: 300px;
   background: #2c2c28;
   padding: 3rem 0;
+  @media (max-width:950px){
+    width:0px;
+    display: none;
+  }
 }
 
 .recent_activities {

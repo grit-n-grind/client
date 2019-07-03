@@ -6,10 +6,16 @@
   display: flex;
 
   .sidebar{
-    
+    @media (max-width:950px){
+      width:0px;
+      display: none;
+    }
   }
 
   &-content {
+    @media (max-width:950px){
+      margin-left: 0px;
+    }
     margin-left: 300px;
     width: 100%;
     min-height: 100%;
