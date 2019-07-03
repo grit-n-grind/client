@@ -31,7 +31,7 @@ export default function AddJournal() {
   const [exercises, addExercise] = useState([])
 
   function handleAddJournal() {
-    const journal = { ...values, exercises }
+    const journal = { ...values, exercises, date: Date.now() }
     console.log(journal)
     store
       .collection("users")

@@ -6,54 +6,63 @@ import { useSession } from "../../hooks/useAuth"
 import { store } from "../../config/firebase"
 
 const UserGoals = () => {
+
   const {
     auth: { uid },
   } = useSession()
-  const [state, setstate] = useState({ isLoading: true, data: [] })
+
+  const [state, setState] = useState({
+    isLoading: true,
+    labelDates: [],
+    bodyFatData: [],
+    currentWeightData: [],
+  })
 
   useEffect(() => {
     const unsubscribe = store
-      .collection("users")
-      .doc(uid)
-      .collection("journals")
-      .onSnapshot(snapShot => {
-        let items = []
-        snapShot.forEach(doc => {
-          const data = doc.data()
-          items.push({ id: doc.id, ...data })
+    .collection("users")
+    .doc(uid)
+    .collection("journals")
+    .onSnapshot(snapShot => {
+      const dates = []
+      const bodyFat = []
+      const weight = []
+
+      snapShot.forEach(doc => {
+        const data = doc.data()
+
+          dates.push(data.date)
+          bodyFat.push(data.bodyFat)
+          weight.push(data.weight)
+
         })
-        setstate({ ...state, isLoading: false, data: items })
+            setState({
+              ...state,
+              labelDates: dates,
+              bodyFatData: bodyFat,
+              currentWeightData: weight,
+              isLoading: false,
+            })
       })
+
 
     return () => unsubscribe()
   }, [])
 
-  console.log(state)
-
   const data = {
-    labels: [
-      "JUN 1st",
-      "JUN 2nd",
-      "JUN 4th",
-      "JUN 5th",
-      "JUN 6th",
-      "JUN 8th",
-      "JUN 9th",
-      "JUN 15th",
-      "JUN 21st",
-    ],
+    labels: state.labelDates,
     datasets: [
       {
-        label: "Body Fat Percentage",
-        data: [30, 24, 22, 20, 20, 19, 15, 20, 23],
-        backgroundColor: "rgba(247, 92, 3, 0.3)",
-        borderColor: "#f75c03",
+        label: "Body Weight",
+        data: state.currentWeightData,
+        backgroundColor: "rgba(255, 10, 10, 0.05)",
+        borderColor: "rgba(255, 10, 10, 1)",
       },
       {
-        label: "Body Weight",
-        data: [250, 249, 244, 246, 242, 235, 220, 210, 200],
-        backgroundColor: "rgba(255, 10, 10, 0.3)",
-        borderColor: "rgba(255, 10, 10, 1)",
+        label: "Body Fat Percentage",
+        data: state.bodyFatData,
+        backgroundColor: "rgba(247, 92, 3, 0.05)",
+        borderColor: "#f75c03",
       },
     ],
   }
@@ -61,9 +70,12 @@ const UserGoals = () => {
   const options = {
     title: {
       display: true,
-      text: "Goal Weight",
+      text: "Progress Chart",
     },
   }
+
+  console.log(state)
+  if (state.isLoading) return <h1>Loading...</h1>
 
   return <Line data={data} options={options} />
 }
