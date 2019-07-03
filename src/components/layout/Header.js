@@ -22,9 +22,9 @@ const Header = ({ firstName, lastName, city, state, page, setPage }) => {
     <div
       className={"dashboard_header"}
       style={{
-        background: `linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(34, 34, 31, 1)), url('${headerImage}')`,
-        bacgkroundPositionY: "center",
-        backgroundSize: "cover",
+        background: `linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(34, 34, 31, 1))  50% / cover, url('${headerImage}')`,
+        backgroundPositionY: "center",
+        // backgroundSize: "cover",
       }}>
       <div>
         <h1
@@ -36,7 +36,7 @@ const Header = ({ firstName, lastName, city, state, page, setPage }) => {
         </button>
         <h3 className={"dashboard_header-city"}>{`${city}, ${state}`}</h3>
         {/* <FaTrophy /> */}
-        <div className={"margin-bottom-2"} />
+        {/* <div className={"margin-bottom"} /> */}
       </div>
       {page && <ProfileNav page={page} setPage={setPage} navItems={navItems} />}
     </div>

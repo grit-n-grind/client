@@ -212,43 +212,6 @@
       font-size: 2rem;
     }
 
-    .exercise_card {
-      max-width: 1000px;
-      border-radius: 4px;
-      justify-content: space-between;
-      display: flex;
-      padding: 10px;
-      margin: 0 auto 15px;
-      width: 90%;
-      background: $black-main;
-      @include material-shadow-low;
-      // filter: contrast(140%);
-
-      svg {
-        margin-top: 14px;
-        margin-right: 10px;
-        color: $orange-primary;
-      }
-
-      p {
-        color: $white;
-      }
-
-      .exercise_title {
-        & > p {
-          font-size: 3rem;
-          font-family: $poppins;
-          font-weight: 700;
-        }
-
-        & > p:last-of-type {
-          font-size: 2rem;
-          font-weight: 400;
-          opacity: 0.6;
-        }
-      }
-    }
-
     .exercise_details {
       display: flex;
       min-width: 50%;
@@ -277,6 +240,43 @@
       max-width: 300px;
       font-size: 2rem;
       margin: 0 auto;
+    }
+  }
+}
+
+.exercise_card {
+  max-width: 1000px;
+  border-radius: 4px;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px;
+  margin: 0 auto 15px;
+  width: 90%;
+  background: $black-main;
+  @include material-shadow-low;
+  // filter: contrast(140%);
+
+  svg {
+    margin-top: 14px;
+    margin-right: 10px;
+    color: $orange-primary;
+  }
+
+  p {
+    color: $white;
+  }
+
+  .exercise_title {
+    & > p {
+      font-size: 3rem;
+      font-family: $poppins;
+      font-weight: 700;
+    }
+
+    & > p:last-of-type {
+      font-size: 2rem;
+      font-weight: 400;
+      opacity: 0.6;
     }
   }
 }

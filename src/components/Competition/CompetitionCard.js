@@ -14,7 +14,7 @@ const CompetitionCard = ({
       <div
         className="competition_card_header"
         style={{
-          background: `linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+          background: `linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
           url("${image}"), rgba(0, 0, 0, 0.1)`,
           backgroundSize: "cover",
           backgroundPosition: "center",

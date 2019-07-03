@@ -1,11 +1,13 @@
 .dashboard {
   &_header {
-    height: 350px;
+    height: 250px;
     width: 100%;
     overflow: hidden;
     position: relative;
     padding: 40px 40px 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-repeat: no-repeat;
     background-size: cover;
 
