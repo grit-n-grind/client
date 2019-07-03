@@ -3,12 +3,13 @@
   max-width: 1000px;
   z-index: 15;
   display: flex;
+  padding-bottom: 20px;
 
   & .nav {
     width: 100%;
     display: flex;
     font-size: 16px;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-wrap: wrap;
 
     & .active > span {
@@ -22,6 +23,7 @@
         padding: 7px;
         word-spacing: 0.1rem;
         letter-spacing: 0.05rem;
+        margin-right: 24px;
         &:hover {
           cursor: pointer;
         }
