@@ -1,9 +1,10 @@
 .competition_card {
-  width: 48.5%;
+  width: 47.5%;
   background: $black-main;
   color: white;
   border-radius: 4px;
   font-family: $openSans;
+  margin: 10px;
   @include material-shadow-low;
 
   .competition_card_header {

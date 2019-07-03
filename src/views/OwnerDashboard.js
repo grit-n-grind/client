@@ -3,6 +3,7 @@ import Sidebar from "../components/layout/Sidebar"
 import HeaderGym from "../components/layout/HeaderGym"
 import Avatar from "../components/layout/Avatar"
 import DashboardContent from "../components/layout/DashboardContent"
+import CompetitionCard from "../components/Competition/CompetitionCard";
 
 const OwnerDashboard = () => {
   
