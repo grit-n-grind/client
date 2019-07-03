@@ -9,10 +9,11 @@ const CurrentCompetitions = ( { gym } ) => {
     gym )
   
   return ( <div className={ "current_competitions" }>
-    { competitions && Object.values( competitions ).map( competition => {
+
+    { competitions ? Object.values( competitions ).map( competition => {
       return <CompetitionCard key={ competition.name }
                               competition={ competition }/>
-    } ) }
+    } ) : <><CompetitionCard /><CompetitionCard /><CompetitionCard /><CompetitionCard /></>}
   </div> )
 }
 
