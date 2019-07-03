@@ -11,6 +11,7 @@ import CurrentCompetitions from "../Gym/CurrentCompetitions"
 const DashboardContent = props => {
   return (
     <div className={"dashboard-content"}>
+      {console.log(props)}
       {props.page === "Goals" && <UserGoals {...props} />}
       {props.page === "Stats" && <UserStats {...props} />}
       {props.page === "graph" && <UserGraph {...props} />}

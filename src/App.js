@@ -36,7 +36,6 @@ export default function App() {
     <userContext.Provider value={reducer}>
       <Switch>
         <PrivateRoute exact path="/dashboard" component={UserDashboard} />
-        <Route exact path="/dashboard/gym" component={OwnerDashboard} />
         <PrivateRoute exact path="/journals/new" component={AddJournal} />
         <Route exact path="/login" render={props => <AuthPage {...props} />} />
         <Route
