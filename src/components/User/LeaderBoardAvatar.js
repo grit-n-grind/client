@@ -1,9 +1,8 @@
 import React from "react"
+import Avatar from "react-avatar"
 
-const LeaderBoardAvatar = () => {
-  return ( <div className={ "leader_board_avatar" }>
-  
-  </div> )
+const LeaderBoardAvatar = ({ name }) => {
+  return <Avatar className={"leader_board_avatar"} name={name} size={50} />
 }
 
 export default LeaderBoardAvatar
